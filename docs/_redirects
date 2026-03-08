@@ -1,0 +1,9 @@
+# Redirects from what the browser requests to what we serve
+# Rewrite a path and change the URL. ! for forcing
+
+/home                              / 301!
+http://cse331.netlify.app/*        https://cse331.netlify.app/:splat  301!
+
+# Learn more: https://docs.netlify.com/routing/redirects/redirect-options
+# Rewrite a path without changing the URL
+# /project450/*    https://rasel-b.github.io/project450_book/:splat  200!
