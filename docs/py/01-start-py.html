@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Md Rasel Biswas">
 
 <title>1 Intro &amp; Basic Data Types – Python for Data Science</title>
 <style>
@@ -113,10 +114,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <meta property="og:title" content="1 Intro &amp; Basic Data Types – Python for Data Science">
-<meta property="og:description" content="The course site for CSE331 at ISRT, University of Dhaka">
+<meta property="og:description" content="(CSE331) Python for Data Science">
 <meta property="og:site_name" content="Python for Data Science">
 <meta name="twitter:title" content="1 Intro &amp; Basic Data Types – Python for Data Science">
-<meta name="twitter:description" content="The course site for CSE331 at ISRT, University of Dhaka">
+<meta name="twitter:description" content="(CSE331) Python for Data Science">
 <meta name="twitter:card" content="summary">
 </head>
 
@@ -477,7 +478,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#naming-variables" id="toc-naming-variables" class="nav-link" data-scroll-target="#naming-variables"><span class="header-section-number">4</span> Naming Variables</a></li>
   <li><a href="#basic-scalar-data-types" id="toc-basic-scalar-data-types" class="nav-link" data-scroll-target="#basic-scalar-data-types"><span class="header-section-number">5</span> Basic Scalar Data Types</a>
   <ul class="collapse">
-  <li><a href="#strings" id="toc-strings" class="nav-link" data-scroll-target="#strings">Strings</a></li>
+  <li><a href="#strings" id="toc-strings" class="nav-link" data-scroll-target="#strings"><span class="header-section-number">5.1</span> Strings</a></li>
   </ul></li>
   <li><a href="#data-types-and-operations" id="toc-data-types-and-operations" class="nav-link" data-scroll-target="#data-types-and-operations"><span class="header-section-number">6</span> Data Types and Operations</a></li>
   <li><a href="#explicit-type-conversion-type-casting" id="toc-explicit-type-conversion-type-casting" class="nav-link" data-scroll-target="#explicit-type-conversion-type-casting"><span class="header-section-number">7</span> Explicit Type Conversion (Type Casting)</a></li>
@@ -499,12 +500,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../py/01-start-py.html">Python Programming</a></li><li class="breadcrumb-item"><a href="../py/01-start-py.html">1 Intro &amp; Basic Data Types</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">1 Intro &amp; Basic Data Types</h1>
+<p class="subtitle lead">(CSE331) Python for Data Science</p>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Md Rasel Biswas </p>
+          </div>
+  </div>
     
   
     
@@ -522,7 +530,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
 <li>In notebooks (like Jupyter/Quarto), the last expression in a cell is also displayed.</li>
 </ul>
-<div id="4632de28" class="cell" data-execution_count="1">
+<div id="01028649" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span> <span class="op">+</span> <span class="dv">4</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="1">
 <pre><code>6</code></pre>
@@ -538,31 +546,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Python can be used as a calculator.</li>
 <li>Common operators: <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>**</code> (power), <code>//</code> (floor division), <code>%</code> (modulus)</li>
 </ul>
-<div id="db22b285" class="cell" data-execution_count="2">
+<div id="327c9867" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>(<span class="dv">59</span> <span class="op">+</span> <span class="dv">73</span> <span class="op">+</span> <span class="dv">2</span>) <span class="op">/</span> <span class="dv">3</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="2">
 <pre><code>44.666666666666664</code></pre>
 </div>
 </div>
-<div id="59ccf1b2" class="cell" data-execution_count="3">
+<div id="b1ca3956" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="dv">10</span><span class="op">**</span>(<span class="dv">3</span><span class="op">+</span><span class="dv">1</span>)               <span class="co"># exponentiation (** is power, not ^)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="3">
 <pre><code>10000</code></pre>
 </div>
 </div>
-<div id="99631790" class="cell" data-execution_count="4">
+<div id="e743db8b" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span><span class="op">**</span><span class="dv">2</span>                     <span class="co"># 3 squared</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="4">
 <pre><code>9</code></pre>
 </div>
 </div>
-<div id="0ced9c53" class="cell" data-execution_count="5">
+<div id="ab185c6f" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="dv">10</span> <span class="op">//</span> <span class="dv">3</span>                  <span class="co"># floor division (integer quotient)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="5">
 <pre><code>3</code></pre>
 </div>
 </div>
-<div id="d909c843" class="cell" data-execution_count="6">
+<div id="03098454" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="dv">10</span> <span class="op">%</span> <span class="dv">3</span>                   <span class="co"># remainder (modulus)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="6">
 <pre><code>1</code></pre>
@@ -576,13 +584,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>A <strong>variable</strong> is a <strong>name</strong> that references an <strong>object</strong> (value) in memory.</li>
 <li>Assignment (<code>=</code>) binds the name (left) to the object (right).</li>
 </ul>
-<div id="1228fdad" class="cell" data-execution_count="7">
+<div id="986e034c" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">48</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li>Multiple assignment (tuple unpacking) is concise and common:</li>
 </ul>
-<div id="b5c861fa" class="cell" data-execution_count="8">
+<div id="e5a4351f" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>a, b, c, d <span class="op">=</span> <span class="dv">7</span>, <span class="dv">5</span>, <span class="dv">8</span>, <span class="dv">4</span></span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a, b, c, d)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -592,7 +600,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li>Swapping variables without a temporary:</li>
 </ul>
-<div id="ca929c1f" class="cell" data-execution_count="9">
+<div id="c11dc35c" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>a, b <span class="op">=</span> b, a</span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a, b)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -642,7 +650,7 @@ Style (PEP 8)
 <li><strong>bool</strong> — logical values (<code>True</code>, <code>False</code>) — behave like ints (<code>True==1</code>, <code>False==0</code>)</li>
 <li><strong>str</strong> — immutable Unicode text (<code>"Dhaka"</code>, <code>"Data Science"</code>)</li>
 </ul>
-<div id="6382c657" class="cell" data-execution_count="10">
+<div id="81300313" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">10</span>            <span class="co"># int</span></span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> <span class="fl">3.5</span>           <span class="co"># float</span></span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> <span class="st">"Rasel"</span>    <span class="co"># str</span></span>
@@ -652,26 +660,20 @@ Style (PEP 8)
 <pre><code>&lt;class 'int'&gt; &lt;class 'float'&gt; &lt;class 'str'&gt; &lt;class 'bool'&gt;</code></pre>
 </div>
 </div>
-<!--
-::: {.callout-note title="Immutability"}
-`int`, `float`, `bool`, and `str` are **immutable** (they cannot be changed in place).
-When you "change" them, you are actually **re-binding** the name to a **new** object.
-:::
--->
 <hr>
-<section id="strings" class="level3">
-<h3 class="anchored" data-anchor-id="strings">Strings</h3>
+<section id="strings" class="level3" data-number="5.1">
+<h3 data-number="5.1" class="anchored" data-anchor-id="strings"><span class="header-section-number">5.1</span> Strings</h3>
 <ul>
 <li>Strings can use single <code>'</code> or double <code>"</code> quotes.</li>
 </ul>
-<div id="64302ff5" class="cell" data-execution_count="11">
+<div id="ac8379fe" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="st">'one way of writing a string'</span></span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="st">"another way"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li>Multi-line strings use triple quotes:</li>
 </ul>
-<div id="94463b46" class="cell" data-execution_count="12">
+<div id="be635fce" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> <span class="st">"""</span></span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="st">This is a longer string that</span></span>
 <span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="st">spans multiple lines</span></span>
@@ -684,28 +686,6 @@ spans multiple lines
 </code></pre>
 </div>
 </div>
-<!--
-* Useful basics:
-
-::: {#ab0edb85 .cell execution_count=13}
-``` {.python .cell-code}
-msg = "Python"
-print(len(msg), msg[0], msg[-1])   # length, first, last
-print(msg.upper(), msg.lower())
-print("Py" + "thon", "ha"*3)
-```
-
-::: {.cell-output .cell-output-stdout}
-```
-6 P n
-PYTHON python
-Python hahaha
-```
-:::
-:::
-
-
--->
 </section>
 </section>
 <section id="data-types-and-operations" class="level2" data-number="6">
@@ -718,16 +698,16 @@ Python hahaha
 <li>numeric + string → <strong>TypeError</strong></li>
 </ul></li>
 </ul>
-<div id="f2f0d68b" class="cell" data-execution_count="14">
+<div id="3cfa4d69" class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="dv">17</span> <span class="op">+</span> <span class="fl">4.3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="14">
 <pre><code>21.3</code></pre>
 </div>
 </div>
-<div id="7d49a44b" class="cell" data-execution_count="15">
+<div id="e901ba26" class="cell" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="dv">17</span> <span class="op">+</span> <span class="st">"seventeen"</span>      <span class="co"># raises TypeError (number + string)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="c83708ad" class="cell" data-execution_count="16">
+<div id="4522a88f" class="cell" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co">"This"</span> <span class="op">+</span> <span class="st">"That"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="15">
 <pre><code>'ThisThat'</code></pre>
@@ -739,7 +719,7 @@ Python hahaha
 <ul>
 <li>The <code>str</code>, <code>bool</code>, <code>int</code>, and <code>float</code> types are also functions that can be used to cast values to those types:</li>
 </ul>
-<div id="a17af34c" class="cell" data-execution_count="17">
+<div id="c4e39926" class="cell" data-execution_count="17">
 <div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> <span class="st">'3.14159'</span></span>
 <span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>fval <span class="op">=</span> <span class="bu">float</span>(s)       <span class="co"># string → float</span></span>
 <span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(fval)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -747,14 +727,14 @@ Python hahaha
 <pre><code>float</code></pre>
 </div>
 </div>
-<div id="4de80c95" class="cell" data-execution_count="18">
+<div id="ff759172" class="cell" data-execution_count="18">
 <div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>ival <span class="op">=</span> <span class="bu">int</span>(fval)      <span class="co"># float → int (truncates toward zero)</span></span>
 <span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(ival)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>3</code></pre>
 </div>
 </div>
-<div id="7aa71fbd" class="cell" data-execution_count="19">
+<div id="fd0cfb20" class="cell" data-execution_count="19">
 <div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>bval <span class="op">=</span> <span class="bu">bool</span>(ival)     <span class="co"># non-zero → True; zero → False</span></span>
 <span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(bval)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -781,7 +761,7 @@ Note
 <li>Python provides a special value called <code>None</code> that is used to indicate the absence of a value.</li>
 <li>The purpose of <code>None</code> is similar to <code>NULL</code> in R</li>
 </ul>
-<div id="c6238427" class="cell" data-execution_count="20">
+<div id="1003d8b2" class="cell" data-execution_count="20">
 <div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="va">None</span></span>
 <span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>a <span class="kw">is</span> <span class="va">None</span>, a <span class="op">==</span> <span class="va">None</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="19">
@@ -797,7 +777,7 @@ Note
 <ul>
 <li><code>==</code> checks <strong>value equality</strong>; <code>is</code> checks <strong>object identity</strong> (same memory address).</li>
 </ul>
-<div id="e756685d" class="cell" data-execution_count="21">
+<div id="3eaebd35" class="cell" data-execution_count="21">
 <div class="sourceCode cell-code" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">3000</span></span>
 <span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> <span class="dv">3000</span></span>
 <span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>z <span class="op">=</span> x</span>
@@ -813,7 +793,7 @@ Note
 <li>Use <code>print()</code> to display values intentionally.</li>
 <li>f-strings make formatted strings easy.</li>
 </ul>
-<div id="8ce7ef74" class="cell" data-execution_count="22">
+<div id="3e64cc0b" class="cell" data-execution_count="22">
 <div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> <span class="st">"Rasel"</span></span>
 <span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>score <span class="op">=</span> <span class="fl">83.4567</span></span>
 <span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Hello, </span><span class="sc">{</span>name<span class="sc">}</span><span class="ss">! Your score is </span><span class="sc">{</span><span class="bu">round</span>(score, <span class="dv">0</span>)<span class="sc">}</span><span class="ss">."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -828,7 +808,7 @@ Note
 <li>Single-line comment: <code># this is a comment</code></li>
 <li>Built-in help:</li>
 </ul>
-<div id="2943bdab" class="cell" data-execution_count="23">
+<div id="0b8299db" class="cell" data-execution_count="23">
 <div class="sourceCode cell-code" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="bu">help</span>(<span class="bu">len</span>)          <span class="co"># opens inline help</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Help on built-in function len in module builtins:
@@ -844,7 +824,7 @@ len(obj, /)
 <ul>
 <li>An augmented assignment is a programming shortcut that combines an operation and an assignment into a single statement, making code more concise and often more readable</li>
 </ul>
-<div id="b14e1dea" class="cell" data-execution_count="24">
+<div id="412245e5" class="cell" data-execution_count="24">
 <div class="sourceCode cell-code" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="dv">10</span></span>
 <span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>n <span class="op">+=</span> <span class="dv">5</span>    <span class="co"># same as n = n + 5</span></span>
 <span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a>n <span class="op">*=</span> <span class="dv">2</span></span>
@@ -859,7 +839,7 @@ len(obj, /)
 <ul>
 <li>Floating-point numbers inherently experience rounding issues due to the way computers represent real numbers</li>
 </ul>
-<div id="ac520661" class="cell" data-execution_count="25">
+<div id="743a178b" class="cell" data-execution_count="25">
 <div class="sourceCode cell-code" id="cb44"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="fl">0.1</span> <span class="op">+</span> <span class="fl">0.2</span></span>
 <span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>a <span class="op">==</span> <span class="fl">0.3</span>, a</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="24">
@@ -869,7 +849,7 @@ len(obj, /)
 <ul>
 <li>Compare using <code>math.isclose()</code></li>
 </ul>
-<div id="9187450b" class="cell" data-execution_count="26">
+<div id="9aa54e5b" class="cell" data-execution_count="26">
 <div class="sourceCode cell-code" id="cb46"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
 <span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a>math.isclose(a, <span class="fl">0.3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="25">
@@ -909,13 +889,13 @@ len(obj, /)
 </tr>
 </tbody>
 </table>
-<div id="9bc78e35" class="cell" data-execution_count="27">
+<div id="0b08c833" class="cell" data-execution_count="27">
 <div class="sourceCode cell-code" id="cb48"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="dv">10</span> <span class="op">&lt;=</span> <span class="dv">15</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="26">
 <pre><code>True</code></pre>
 </div>
 </div>
-<div id="7ae175dc" class="cell" data-execution_count="28">
+<div id="208587dd" class="cell" data-execution_count="28">
 <div class="sourceCode cell-code" id="cb50"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="dv">14</span> <span class="op">!=</span> <span class="dv">16</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="27">
 <pre><code>True</code></pre>
@@ -925,7 +905,7 @@ len(obj, /)
 <ul>
 <li><strong>Chaining</strong> is allowed and reads naturally:</li>
 </ul>
-<div id="d5dc8152" class="cell" data-execution_count="29">
+<div id="bf97f163" class="cell" data-execution_count="29">
 <div class="sourceCode cell-code" id="cb52"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">3</span></span>
 <span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a><span class="dv">0</span> <span class="op">&lt;</span> x <span class="op">&lt;</span> <span class="dv">5</span>, (<span class="dv">0</span> <span class="op">&lt;</span> x <span class="kw">and</span> x <span class="op">&lt;</span> <span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="28">
@@ -935,18 +915,12 @@ len(obj, /)
 <ul>
 <li>Logical operators: <code>and</code>, <code>or</code>, <code>not</code></li>
 </ul>
-<!--(short-circuiting)-->
-<div id="882bee8c" class="cell" data-execution_count="30">
+<div id="574417bf" class="cell" data-execution_count="30">
 <div class="sourceCode cell-code" id="cb54"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a>(<span class="dv">2</span> <span class="op">&lt;</span> <span class="dv">5</span>) <span class="kw">and</span> (<span class="dv">10</span> <span class="op">&gt;</span> <span class="dv">3</span>), (<span class="dv">2</span> <span class="op">&gt;</span> <span class="dv">5</span>) <span class="kw">or</span> (<span class="dv">10</span> <span class="op">&gt;</span> <span class="dv">3</span>), <span class="kw">not</span> <span class="va">False</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="29">
 <pre><code>(True, True, True)</code></pre>
 </div>
 </div>
-<!--
-::: {.callout-note title="Python vs R logicals"}
-Python uses `and`, `or`, `not` for booleans (not `&`, `|`, `!` which are bitwise).
-:::
--->
 </section>
 <section id="summary" class="level2" data-number="15">
 <h2 data-number="15" class="anchored" data-anchor-id="summary"><span class="header-section-number">15</span> Summary</h2>

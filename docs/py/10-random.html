@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Md Rasel Biswas">
 
 <title>10 NumPy Random Number – Python for Data Science</title>
 <style>
@@ -113,13 +114,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <meta property="og:title" content="10 NumPy Random Number – Python for Data Science">
-<meta property="og:description" content="The course site for CSE331 at ISRT, University of Dhaka">
+<meta property="og:description" content="(CSE331) Python for Data Science">
 <meta property="og:image" content="https://cse331.netlify.app/py/10-random_files/figure-html/cell-10-output-1.png">
 <meta property="og:site_name" content="Python for Data Science">
 <meta property="og:image:height" content="603">
 <meta property="og:image:width" content="748">
 <meta name="twitter:title" content="10 NumPy Random Number – Python for Data Science">
-<meta name="twitter:description" content="The course site for CSE331 at ISRT, University of Dhaka">
+<meta name="twitter:description" content="(CSE331) Python for Data Science">
 <meta name="twitter:image" content="https://cse331.netlify.app/py/10-random_files/figure-html/cell-10-output-1.png">
 <meta name="twitter:image-height" content="603">
 <meta name="twitter:image-width" content="748">
@@ -480,9 +481,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#random-sampling" id="toc-random-sampling" class="nav-link active" data-scroll-target="#random-sampling"><span class="header-section-number">1</span> Random Sampling</a></li>
   <li><a href="#sampling-from-statistical-distributions" id="toc-sampling-from-statistical-distributions" class="nav-link" data-scroll-target="#sampling-from-statistical-distributions"><span class="header-section-number">2</span> Sampling from Statistical Distributions</a>
   <ul class="collapse">
-  <li><a href="#the-uniform-distribution" id="toc-the-uniform-distribution" class="nav-link" data-scroll-target="#the-uniform-distribution">The Uniform Distribution</a></li>
-  <li><a href="#the-normal-distribution" id="toc-the-normal-distribution" class="nav-link" data-scroll-target="#the-normal-distribution">The Normal Distribution</a></li>
-  <li><a href="#the-gamma-distribution" id="toc-the-gamma-distribution" class="nav-link" data-scroll-target="#the-gamma-distribution">The Gamma Distribution</a></li>
+  <li><a href="#the-uniform-distribution" id="toc-the-uniform-distribution" class="nav-link" data-scroll-target="#the-uniform-distribution"><span class="header-section-number">2.1</span> The Uniform Distribution</a></li>
+  <li><a href="#the-normal-distribution" id="toc-the-normal-distribution" class="nav-link" data-scroll-target="#the-normal-distribution"><span class="header-section-number">2.2</span> The Normal Distribution</a></li>
+  <li><a href="#the-gamma-distribution" id="toc-the-gamma-distribution" class="nav-link" data-scroll-target="#the-gamma-distribution"><span class="header-section-number">2.3</span> The Gamma Distribution</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -494,12 +495,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../py/08-arrays-1d.html">Python for Data Science</a></li><li class="breadcrumb-item"><a href="../py/10-random.html">10 NumPy Random Number</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">10 NumPy Random Number</h1>
+<p class="subtitle lead">(CSE331) Python for Data Science</p>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Md Rasel Biswas </p>
+          </div>
+  </div>
     
   
     
@@ -511,7 +519,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <p>In this lesson, we will learn how to use <strong>NumPy</strong> to generate random numbers and random samples. While base Python provides basic randomization tools through the <code>random</code> module, NumPy extends these capabilities with greater flexibility, efficiency, and access to a wide range of statistical distributions.</p>
-<div id="6ed3c269" class="cell" data-execution_count="1">
+<div id="c7d0e646" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -531,32 +539,32 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="example-rolling-a-die" class="level4">
 <h4 class="anchored" data-anchor-id="example-rolling-a-die">Example: Rolling a Die</h4>
-<div id="9be09817" class="cell" data-execution_count="2">
+<div id="3c76c0fa" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># A single roll of a fair die</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>die_roll <span class="op">=</span> np.random.choice(<span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">7</span>))</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(die_roll)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>5</code></pre>
+<pre><code>4</code></pre>
 </div>
 </div>
 <ul>
 <li>We can also draw multiple samples:</li>
 </ul>
-<div id="d8f3aa0c" class="cell" data-execution_count="3">
+<div id="8ee29924" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>eight_rolls <span class="op">=</span> np.random.choice(<span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">7</span>), size<span class="op">=</span><span class="dv">8</span>)</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(eight_rolls)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[4 6 3 3 3 4 4 3]</code></pre>
+<pre><code>[3 6 2 6 6 4 3 4]</code></pre>
 </div>
 </div>
 <ul>
 <li>If we set <code>size=1</code>, the function returns an array with a single value. If we leave <code>size=None</code>, it returns just an integer:</li>
 </ul>
-<div id="d8769a93" class="cell" data-execution_count="4">
+<div id="79242ba4" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>one_roll <span class="op">=</span> np.random.choice(<span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">7</span>), size<span class="op">=</span><span class="dv">1</span>)</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(one_roll)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[3]</code></pre>
+<pre><code>[5]</code></pre>
 </div>
 </div>
 </section>
@@ -565,12 +573,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li>By default, all outcomes are equally likely. To assign different probabilities, we can use the <code>p</code> parameter:</li>
 </ul>
-<div id="9c0d92f9" class="cell" data-execution_count="5">
+<div id="4d6986a0" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>loaded_die <span class="op">=</span> np.random.choice(<span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">7</span>), size<span class="op">=</span><span class="dv">10</span>, </span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>                              p<span class="op">=</span>[<span class="fl">0.5</span>, <span class="fl">0.2</span>, <span class="fl">0.1</span>, <span class="fl">0.1</span>, <span class="fl">0.05</span>, <span class="fl">0.05</span>])</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(loaded_die)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1 4 1 1 4 2 2 2 1 2]</code></pre>
+<pre><code>[2 5 1 1 1 4 1 1 1 4]</code></pre>
 </div>
 </div>
 </section>
@@ -579,11 +587,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li><code>np.random.choice()</code> can also sample from non-numeric arrays or lists:</li>
 </ul>
-<div id="aef6c967" class="cell" data-execution_count="6">
+<div id="dd9930e2" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>my_sample <span class="op">=</span> np.random.choice([<span class="st">'A'</span>, <span class="st">'B'</span>, <span class="st">'C'</span>], size<span class="op">=</span><span class="dv">10</span>)</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(my_sample)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>['A' 'A' 'C' 'C' 'C' 'B' 'C' 'C' 'B' 'C']</code></pre>
+<pre><code>['C' 'C' 'B' 'C' 'C' 'B' 'A' 'A' 'C' 'B']</code></pre>
 </div>
 </div>
 </section>
@@ -592,14 +600,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li>Setting <code>replace=False</code> ensures that each element is selected at most once:</li>
 </ul>
-<div id="a537299e" class="cell" data-execution_count="7">
+<div id="a15bd2b2" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>names <span class="op">=</span> [<span class="st">'Anna'</span>, <span class="st">'Beth'</span>, <span class="st">'Chad'</span>, <span class="st">'Drew'</span>, <span class="st">'Emma'</span>, </span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>         <span class="st">'Fred'</span>, <span class="st">'Gary'</span>, <span class="st">'Hana'</span>, <span class="st">'Iris'</span>, <span class="st">'Jake'</span>]</span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>group <span class="op">=</span> np.random.choice(names, size<span class="op">=</span><span class="dv">5</span>, replace<span class="op">=</span><span class="va">False</span>)</span>
 <span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(group)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>['Chad' 'Jake' 'Beth' 'Fred' 'Gary']</code></pre>
+<pre><code>['Gary' 'Emma' 'Anna' 'Jake' 'Drew']</code></pre>
 </div>
 </div>
 <p>This is useful for creating random groups or assigning participants to treatment conditions.</p>
@@ -613,18 +621,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Normal distribution</li>
 <li>Gamma distribution</li>
 </ul>
-<section id="the-uniform-distribution" class="level3">
-<h3 class="anchored" data-anchor-id="the-uniform-distribution">The Uniform Distribution</h3>
+<section id="the-uniform-distribution" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="the-uniform-distribution"><span class="header-section-number">2.1</span> The Uniform Distribution</h3>
 <p>A random variable that follows a <strong>uniform distribution</strong> on an interval <code>[a, b]</code> has an equal probability of taking any value within that interval.</p>
 <p>We can generate such random numbers using <code>np.random.uniform()</code>:</p>
-<div id="3ef840d8" class="cell" data-execution_count="8">
+<div id="8efe3fdb" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>unif_sample <span class="op">=</span> np.random.uniform(low<span class="op">=</span><span class="dv">6</span>, high<span class="op">=</span><span class="dv">10</span>, size<span class="op">=</span><span class="dv">10000</span>)</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(unif_sample)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[6.39219371 8.87599648 8.69689461 ... 8.98985336 7.63727258 7.22501507]</code></pre>
+<pre><code>[7.84428516 9.06520087 6.44672135 ... 8.24529126 9.05215809 9.33672511]</code></pre>
 </div>
 </div>
-<div id="6e0f0ba7" class="cell" data-execution_count="9">
+<div id="70f29264" class="cell" data-execution_count="9">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>plt.hist(unif_sample, bins<span class="op">=</span>np.arange(<span class="fl">5.5</span>, <span class="dv">11</span>, <span class="fl">0.5</span>), </span>
@@ -643,23 +651,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="the-normal-distribution" class="level3">
-<h3 class="anchored" data-anchor-id="the-normal-distribution">The Normal Distribution</h3>
+<section id="the-normal-distribution" class="level3" data-number="2.2">
+<h3 data-number="2.2" class="anchored" data-anchor-id="the-normal-distribution"><span class="header-section-number">2.2</span> The Normal Distribution</h3>
 <p>A <strong>normal (Gaussian) distribution</strong> is characterized by two parameters:</p>
 <ul>
 <li><strong>Mean (μ):</strong> Determines the center of the distribution.</li>
 <li><strong>Standard deviation (σ):</strong> Controls the spread of the data.</li>
 </ul>
 <p>We can sample from a normal distribution using <code>np.random.normal()</code>:</p>
-<div id="4a5d04db" class="cell" data-execution_count="10">
+<div id="30e65b87" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>norm_sample <span class="op">=</span> np.random.normal(loc<span class="op">=</span><span class="dv">10</span>, scale<span class="op">=</span><span class="dv">3</span>, size<span class="op">=</span><span class="dv">10000</span>)</span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(norm_sample)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[ 7.33218279 10.6069436  11.56781312 ...  7.75608678 11.25494874
-  3.03328935]</code></pre>
+<pre><code>[10.96900689 11.72749562  8.25999426 ... 12.67349771 10.74891314
+ 15.807668  ]</code></pre>
 </div>
 </div>
-<div id="9bb250d7" class="cell" data-execution_count="11">
+<div id="e5d8a91e" class="cell" data-execution_count="11">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>plt.hist(norm_sample, bins<span class="op">=</span>np.arange(<span class="dv">0</span>, <span class="dv">20</span>, <span class="fl">0.5</span>), </span>
@@ -680,7 +688,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="estimating-probabilities-using-simulation" class="level4">
 <h4 class="anchored" data-anchor-id="estimating-probabilities-using-simulation">Estimating Probabilities Using Simulation</h4>
 <p>We can use large random samples to estimate probabilities for a normal random variable:</p>
-<div id="2894ff6e" class="cell" data-execution_count="12">
+<div id="19981138" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> np.random.normal(loc<span class="op">=</span><span class="dv">10</span>, scale<span class="op">=</span><span class="dv">2</span>, size<span class="op">=</span><span class="dv">1000000</span>)</span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Prob[X &lt; 10] ='</span>, np.mean(X <span class="op">&lt;</span> <span class="dv">10</span>))</span>
@@ -689,20 +697,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Prob[6 &lt; X &lt; 14] ='</span>, np.mean((X <span class="op">&gt;</span> <span class="dv">6</span>) <span class="op">&amp;</span> (X <span class="op">&lt;</span> <span class="dv">14</span>)))</span>
 <span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Prob[4 &lt; X &lt; 16] ='</span>, np.mean((X <span class="op">&gt;</span> <span class="dv">4</span>) <span class="op">&amp;</span> (X <span class="op">&lt;</span> <span class="dv">16</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Prob[X &lt; 10] = 0.500255
-Prob[X &lt; 12] = 0.841841
-Prob[8 &lt; X &lt; 12] = 0.682532
-Prob[6 &lt; X &lt; 14] = 0.954546
-Prob[4 &lt; X &lt; 16] = 0.997355</code></pre>
+<pre><code>Prob[X &lt; 10] = 0.499965
+Prob[X &lt; 12] = 0.841149
+Prob[8 &lt; X &lt; 12] = 0.682784
+Prob[6 &lt; X &lt; 14] = 0.954586
+Prob[4 &lt; X &lt; 16] = 0.997268</code></pre>
 </div>
 </div>
 </section>
 </section>
-<section id="the-gamma-distribution" class="level3">
-<h3 class="anchored" data-anchor-id="the-gamma-distribution">The Gamma Distribution</h3>
+<section id="the-gamma-distribution" class="level3" data-number="2.3">
+<h3 data-number="2.3" class="anchored" data-anchor-id="the-gamma-distribution"><span class="header-section-number">2.3</span> The Gamma Distribution</h3>
 <p>A random variable that follows a <strong>Gamma distribution</strong> takes only positive values and is often <em>right-skewed</em>. It is commonly used to model waiting times — such as time until a machine fails or until the next earthquake occurs.</p>
 <p>We can sample from a Gamma distribution using <code>np.random.gamma()</code>:</p>
-<div id="ba1feadc" class="cell" data-execution_count="13">
+<div id="b2e9b241" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">137</span>)  <span class="co"># Setting the seed for reproducibility</span></span>
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>gamma_sample <span class="op">=</span> np.random.gamma(shape<span class="op">=</span><span class="dv">3</span>, scale<span class="op">=</span><span class="dv">10</span>, size<span class="op">=</span><span class="dv">10000</span>)</span>
 <span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(gamma_sample)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -711,7 +719,7 @@ Prob[4 &lt; X &lt; 16] = 0.997355</code></pre>
  40.04233959]</code></pre>
 </div>
 </div>
-<div id="3ad099dd" class="cell" data-execution_count="14">
+<div id="55194f2b" class="cell" data-execution_count="14">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>plt.hist(gamma_sample, bins<span class="op">=</span>np.arange(<span class="dv">0</span>, <span class="dv">150</span>, <span class="dv">5</span>), </span>

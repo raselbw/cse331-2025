@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Md Rasel Biswas">
 
 <title>16 Seaborn – Python for Data Science</title>
 <style>
@@ -116,13 +117,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <meta property="og:title" content="16 Seaborn – Python for Data Science">
-<meta property="og:description" content="The course site for CSE331 at ISRT, University of Dhaka">
+<meta property="og:description" content="(CSE331) Python for Data Science">
 <meta property="og:image" content="https://cse331.netlify.app/py/images/function_overview_8_0.png">
 <meta property="og:site_name" content="Python for Data Science">
 <meta property="og:image:height" content="457">
 <meta property="og:image:width" content="633">
 <meta name="twitter:title" content="16 Seaborn – Python for Data Science">
-<meta name="twitter:description" content="The course site for CSE331 at ISRT, University of Dhaka">
+<meta name="twitter:description" content="(CSE331) Python for Data Science">
 <meta name="twitter:image" content="https://cse331.netlify.app/py/images/function_overview_8_0.png">
 <meta name="twitter:image-height" content="457">
 <meta name="twitter:image-width" content="633">
@@ -540,12 +541,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../py/08-arrays-1d.html">Python for Data Science</a></li><li class="breadcrumb-item"><a href="../py/16-sns.html">16 Seaborn</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">16 Seaborn</h1>
+<p class="subtitle lead">(CSE331) Python for Data Science</p>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Md Rasel Biswas </p>
+          </div>
+  </div>
     
   
     
@@ -576,7 +584,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Complex plots require very little code</li>
 </ul>
 <p>We import Seaborn as:</p>
-<div id="81387fd2" class="cell" data-execution_count="1">
+<div id="3225cfb3" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -584,33 +592,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="seaborn-themes-and-style" class="level2" data-number="2">
 <h2 data-number="2" class="anchored" data-anchor-id="seaborn-themes-and-style"><span class="header-section-number">2</span> Seaborn Themes and Style</h2>
 <p>Seaborn provides clean built-in themes that enhance Matplotlib plots.</p>
-<div id="4a3f463a" class="cell" data-execution_count="2">
+<div id="121a0bab" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>sns.set_theme()   <span class="co"># Default theme</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Other options:</p>
-<div id="971915cc" class="cell" data-execution_count="3">
+<div id="bd48d8da" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>sns.set_style(<span class="st">"whitegrid"</span>)</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>sns.set_style(<span class="st">"darkgrid"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<!--
-## Seaborn vs Matplotlib (Conceptual)
-
-| Feature               | Matplotlib    | Seaborn    |
-| --------------------- | ------------- | ---------- |
-| Level                 | Low-level     | High-level |
-| Default style         | Plain         | Beautiful  |
-| Works with DataFrames | Not directly  | Yes        |
-| Statistical plots     | Manual coding | Built-in   |
-| Multi-variable plots  | Verbose       | Simple     |
-
-Seaborn functions work **column-wise**, reducing boilerplate code.
--->
 <p>Load the <a href="data/penguins.csv"><strong>palmerpenguins</strong></a> data</p>
-<div id="f76cbc2f" class="cell" data-execution_count="4">
+<div id="d0c9d917" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>penguins <span class="op">=</span> pd.read_csv(<span class="st">"data/penguins.csv"</span>)</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>penguins.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="103">
+<div class="cell-output cell-output-display" data-execution_count="4">
 <div>
 
 
@@ -743,7 +738,7 @@ Seaborn functions work **column-wise**, reducing boilerplate code.
 </ul>
 <section id="scatterplot" class="level3" data-number="4.1">
 <h3 data-number="4.1" class="anchored" data-anchor-id="scatterplot"><span class="header-section-number">4.1</span> <code>scatterplot</code></h3>
-<div id="159cea6c" class="cell" data-execution_count="5">
+<div id="50f2e344" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>sns.scatterplot(data<span class="op">=</span>penguins, x<span class="op">=</span><span class="st">"flipper_length_mm"</span>, y<span class="op">=</span><span class="st">"bill_length_mm"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
@@ -757,7 +752,7 @@ Seaborn functions work **column-wise**, reducing boilerplate code.
 <section id="lineplot" class="level3" data-number="4.2">
 <h3 data-number="4.2" class="anchored" data-anchor-id="lineplot"><span class="header-section-number">4.2</span> <code>lineplot</code></h3>
 <p>(Not very meaningful for penguins, but for demonstration)</p>
-<div id="7f0e2f9a" class="cell" data-execution_count="6">
+<div id="975340e8" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>sns.lineplot(</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    data<span class="op">=</span>penguins.sort_values(<span class="st">"flipper_length_mm"</span>),</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    x<span class="op">=</span><span class="st">"flipper_length_mm"</span>,</span>
@@ -774,7 +769,7 @@ Seaborn functions work **column-wise**, reducing boilerplate code.
 </section>
 <section id="high-level-relplot" class="level3" data-number="4.3">
 <h3 data-number="4.3" class="anchored" data-anchor-id="high-level-relplot"><span class="header-section-number">4.3</span> High-level <code>relplot</code></h3>
-<div id="f6376441" class="cell" data-execution_count="7">
+<div id="7c176e43" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>sns.relplot(</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    data<span class="op">=</span>penguins,</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    x<span class="op">=</span><span class="st">"flipper_length_mm"</span>,</span>
@@ -796,7 +791,7 @@ Seaborn functions work **column-wise**, reducing boilerplate code.
 <p>Seaborn allows rich customization of plots using visual encodings. These help communicate more variables through the plot.</p>
 <section id="hue-color-by-category" class="level3" data-number="5.1">
 <h3 data-number="5.1" class="anchored" data-anchor-id="hue-color-by-category"><span class="header-section-number">5.1</span> <code>hue</code> (color by category)</h3>
-<div id="4969897d" class="cell" data-execution_count="8">
+<div id="9083b121" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>sns.scatterplot(</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    data<span class="op">=</span>penguins,</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    x<span class="op">=</span><span class="st">"flipper_length_mm"</span>,</span>
@@ -814,7 +809,7 @@ Seaborn functions work **column-wise**, reducing boilerplate code.
 </section>
 <section id="hue-style-shape" class="level3" data-number="5.2">
 <h3 data-number="5.2" class="anchored" data-anchor-id="hue-style-shape"><span class="header-section-number">5.2</span> <code>hue</code> + <code>style</code> (Shape)</h3>
-<div id="e780a8da" class="cell" data-execution_count="9">
+<div id="42447544" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>sns.scatterplot(</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    data<span class="op">=</span>penguins,</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    x<span class="op">=</span><span class="st">"bill_length_mm"</span>,</span>
@@ -834,7 +829,7 @@ Seaborn functions work **column-wise**, reducing boilerplate code.
 <section id="size-continuous-variable" class="level3" data-number="5.3">
 <h3 data-number="5.3" class="anchored" data-anchor-id="size-continuous-variable"><span class="header-section-number">5.3</span> <code>size</code> (continuous variable)</h3>
 <p>Visualizing body mass differences:</p>
-<div id="ceae79cd" class="cell" data-execution_count="10">
+<div id="9cbe55e4" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>sns.scatterplot(</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    data<span class="op">=</span>penguins,</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    x<span class="op">=</span><span class="st">"bill_depth_mm"</span>,</span>
@@ -857,7 +852,7 @@ Seaborn functions work **column-wise**, reducing boilerplate code.
 <section id="alpha-transparency" class="level3" data-number="5.4">
 <h3 data-number="5.4" class="anchored" data-anchor-id="alpha-transparency"><span class="header-section-number">5.4</span> <code>alpha</code> (Transparency)</h3>
 <p>Useful for overlapping points:</p>
-<div id="4b797f0b" class="cell" data-execution_count="11">
+<div id="17153aa2" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>sns.scatterplot(</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    data<span class="op">=</span>penguins,</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    x<span class="op">=</span><span class="st">"flipper_length_mm"</span>,</span>
@@ -879,17 +874,17 @@ Seaborn functions work **column-wise**, reducing boilerplate code.
 <p>Seaborn has many beautiful palettes.</p>
 <section id="built-in-palettes" class="level4">
 <h4 class="anchored" data-anchor-id="built-in-palettes">Built-in palettes</h4>
-<div id="a56bf504" class="cell" data-execution_count="12">
+<div id="b1f11ebb" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>sns.color_palette()</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>sns.palettes.SEABORN_PALETTES.keys()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="111">
+<div class="cell-output cell-output-display" data-execution_count="12">
 <pre><code>dict_keys(['deep', 'deep6', 'muted', 'muted6', 'pastel', 'pastel6', 'bright', 'bright6', 'dark', 'dark6', 'colorblind', 'colorblind6'])</code></pre>
 </div>
 </div>
 </section>
 <section id="hue-palette" class="level4">
 <h4 class="anchored" data-anchor-id="hue-palette"><code>hue</code> + <code>palette</code></h4>
-<div id="1daf2b94" class="cell" data-execution_count="13">
+<div id="ce074b30" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>sns.scatterplot(</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>    data<span class="op">=</span>penguins,</span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>    x<span class="op">=</span><span class="st">"bill_length_mm"</span>,</span>
@@ -922,7 +917,7 @@ Seaborn functions work **column-wise**, reducing boilerplate code.
 <section id="hue-style-size-alpha-palette" class="level3" data-number="5.6">
 <h3 data-number="5.6" class="anchored" data-anchor-id="hue-style-size-alpha-palette"><span class="header-section-number">5.6</span> <code>hue</code> + <code>style</code> + <code>size</code> + <code>alpha</code> + <code>palette</code></h3>
 <p>This combines everything into one plot:</p>
-<div id="13125ca5" class="cell" data-execution_count="14">
+<div id="b20c8340" class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>sns.scatterplot(</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>    data<span class="op">=</span>penguins,</span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>    x<span class="op">=</span><span class="st">"flipper_length_mm"</span>,</span>
@@ -961,7 +956,7 @@ Seaborn functions work **column-wise**, reducing boilerplate code.
 </ul>
 <section id="histplot" class="level3" data-number="6.1">
 <h3 data-number="6.1" class="anchored" data-anchor-id="histplot"><span class="header-section-number">6.1</span> <code>histplot</code></h3>
-<div id="c18206ee" class="cell" data-execution_count="15">
+<div id="0441bed0" class="cell" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>sns.histplot(</span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>    data<span class="op">=</span>penguins,</span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>    x<span class="op">=</span><span class="st">"bill_length_mm"</span>,</span>
@@ -978,7 +973,7 @@ Seaborn functions work **column-wise**, reducing boilerplate code.
 </section>
 <section id="kernel-density-estimate---kdeplot" class="level3" data-number="6.2">
 <h3 data-number="6.2" class="anchored" data-anchor-id="kernel-density-estimate---kdeplot"><span class="header-section-number">6.2</span> Kernel Density Estimate - <code>kdeplot</code></h3>
-<div id="5658580a" class="cell" data-execution_count="16">
+<div id="f53ae4fa" class="cell" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>sns.kdeplot(</span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>    data<span class="op">=</span>penguins,</span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>    x<span class="op">=</span><span class="st">"body_mass_g"</span>,</span>
@@ -995,7 +990,7 @@ Seaborn functions work **column-wise**, reducing boilerplate code.
 </section>
 <section id="high-level-displot" class="level3" data-number="6.3">
 <h3 data-number="6.3" class="anchored" data-anchor-id="high-level-displot"><span class="header-section-number">6.3</span> High-level <code>displot</code></h3>
-<div id="c2ec953a" class="cell" data-execution_count="17">
+<div id="d88bfb04" class="cell" data-execution_count="17">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>sns.displot(</span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>    data<span class="op">=</span>penguins,</span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>    x<span class="op">=</span><span class="st">"bill_length_mm"</span>,</span>
@@ -1033,7 +1028,7 @@ Seaborn functions work **column-wise**, reducing boilerplate code.
 </ul>
 <section id="boxplot" class="level3" data-number="7.1">
 <h3 data-number="7.1" class="anchored" data-anchor-id="boxplot"><span class="header-section-number">7.1</span> <code>boxplot</code></h3>
-<div id="0f8ece12" class="cell" data-execution_count="18">
+<div id="0ac22edf" class="cell" data-execution_count="18">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>sns.boxplot(</span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>    data<span class="op">=</span>penguins,</span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>    x<span class="op">=</span><span class="st">"species"</span>,</span>
@@ -1050,7 +1045,7 @@ Seaborn functions work **column-wise**, reducing boilerplate code.
 </section>
 <section id="violinplot" class="level3" data-number="7.2">
 <h3 data-number="7.2" class="anchored" data-anchor-id="violinplot"><span class="header-section-number">7.2</span> <code>violinplot</code></h3>
-<div id="9f528929" class="cell" data-execution_count="19">
+<div id="c931459c" class="cell" data-execution_count="19">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>sns.violinplot(</span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>    data<span class="op">=</span>penguins,</span>
 <span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>    x<span class="op">=</span><span class="st">"species"</span>,</span>
@@ -1069,7 +1064,7 @@ Seaborn functions work **column-wise**, reducing boilerplate code.
 <h3 data-number="7.3" class="anchored" data-anchor-id="barplot-aggregate"><span class="header-section-number">7.3</span> <code>barplot</code> (Aggregate)</h3>
 <p>By default, Seaborn shows <strong>mean with CI intervals</strong> — very useful for statistics.</p>
 <p>Average body mass by species:</p>
-<div id="46b0a588" class="cell" data-execution_count="20">
+<div id="aa842dde" class="cell" data-execution_count="20">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>sns.barplot(</span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>    data<span class="op">=</span>penguins,</span>
 <span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>    x<span class="op">=</span><span class="st">"species"</span>,</span>
@@ -1087,10 +1082,10 @@ Seaborn functions work **column-wise**, reducing boilerplate code.
 <section id="countplot" class="level3" data-number="7.4">
 <h3 data-number="7.4" class="anchored" data-anchor-id="countplot"><span class="header-section-number">7.4</span> <code>countplot</code></h3>
 <p>For categorical frequencies:</p>
-<div id="25bc85f6" class="cell" data-execution_count="21">
+<div id="a7137915" class="cell" data-execution_count="21">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>sns.countplot(data<span class="op">=</span>penguins, x<span class="op">=</span><span class="st">"island"</span>)</span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Count of Penguins by Island"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="120">
+<div class="cell-output cell-output-display" data-execution_count="21">
 <pre><code>Text(0.5, 1.0, 'Count of Penguins by Island')</code></pre>
 </div>
 <div class="cell-output cell-output-display">
@@ -1104,7 +1099,7 @@ Seaborn functions work **column-wise**, reducing boilerplate code.
 </section>
 <section id="high-level-catplot" class="level3" data-number="7.5">
 <h3 data-number="7.5" class="anchored" data-anchor-id="high-level-catplot"><span class="header-section-number">7.5</span> High-level <code>catplot</code></h3>
-<div id="608c036a" class="cell" data-execution_count="22">
+<div id="e6d3a6f0" class="cell" data-execution_count="22">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>sns.catplot(</span>
 <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>    data<span class="op">=</span>penguins,</span>
 <span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>    x<span class="op">=</span><span class="st">"species"</span>,</span>
@@ -1130,7 +1125,7 @@ Seaborn functions work **column-wise**, reducing boilerplate code.
 <section id="lmplot" class="level3" data-number="8.1">
 <h3 data-number="8.1" class="anchored" data-anchor-id="lmplot"><span class="header-section-number">8.1</span> <code>lmplot</code></h3>
 <p>Equivalent to ggplot2 <code>geom_smooth(method="lm")</code>.</p>
-<div id="f28d03aa" class="cell" data-execution_count="23">
+<div id="eafb5334" class="cell" data-execution_count="23">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>sns.lmplot(</span>
 <span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>    data<span class="op">=</span>penguins,</span>
 <span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>    x<span class="op">=</span><span class="st">"flipper_length_mm"</span>,</span>
@@ -1144,7 +1139,7 @@ Seaborn functions work **column-wise**, reducing boilerplate code.
 </div>
 </div>
 </div>
-<div id="0c0af723" class="cell" data-execution_count="24">
+<div id="40bf24bd" class="cell" data-execution_count="24">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>sns.lmplot(</span>
 <span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>    data<span class="op">=</span>penguins,</span>
 <span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>    x<span class="op">=</span><span class="st">"flipper_length_mm"</span>,</span>
@@ -1170,7 +1165,7 @@ Seaborn functions work **column-wise**, reducing boilerplate code.
 <section id="heatmap" class="level3" data-number="9.1">
 <h3 data-number="9.1" class="anchored" data-anchor-id="heatmap"><span class="header-section-number">9.1</span> <code>heatmap</code></h3>
 <p>Correlation between numeric variables:</p>
-<div id="15074d1f" class="cell" data-execution_count="25">
+<div id="1eb03f17" class="cell" data-execution_count="25">
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>corr <span class="op">=</span> penguins.select_dtypes(<span class="st">"number"</span>).corr()</span>
 <span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>sns.heatmap(</span>
@@ -1193,7 +1188,7 @@ Seaborn functions work **column-wise**, reducing boilerplate code.
 <section id="faceting-with-col-multiple-panels" class="level3" data-number="10.1">
 <h3 data-number="10.1" class="anchored" data-anchor-id="faceting-with-col-multiple-panels"><span class="header-section-number">10.1</span> Faceting with <code>col</code> (Multiple Panels)</h3>
 <p>The <code>col</code> argument creates separate panels for each category, which helps compare patterns across groups.</p>
-<div id="fac14bf3" class="cell" data-execution_count="26">
+<div id="306b7eab" class="cell" data-execution_count="26">
 <div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>sns.relplot(</span>
 <span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>    data<span class="op">=</span>penguins,</span>
 <span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>    x<span class="op">=</span><span class="st">"flipper_length_mm"</span>,</span>
@@ -1213,7 +1208,7 @@ Seaborn functions work **column-wise**, reducing boilerplate code.
 <section id="facetgrid" class="level3" data-number="10.2">
 <h3 data-number="10.2" class="anchored" data-anchor-id="facetgrid"><span class="header-section-number">10.2</span> <code>FacetGrid</code></h3>
 <p>Faceting by <code>species</code> and <code>sex</code>:</p>
-<div id="4dfa2fc9" class="cell" data-execution_count="27">
+<div id="39144f52" class="cell" data-execution_count="27">
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>g <span class="op">=</span> sns.FacetGrid(</span>
 <span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>    penguins,</span>
 <span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>    col<span class="op">=</span><span class="st">"species"</span>,</span>
@@ -1237,7 +1232,7 @@ Seaborn functions work **column-wise**, reducing boilerplate code.
 <section id="pairplot" class="level3" data-number="10.3">
 <h3 data-number="10.3" class="anchored" data-anchor-id="pairplot"><span class="header-section-number">10.3</span> <code>pairplot</code></h3>
 <p>For multivariate exploration</p>
-<div id="167fc6d3" class="cell" data-execution_count="28">
+<div id="2fdb61a8" class="cell" data-execution_count="28">
 <div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>sns.pairplot(penguins)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
@@ -1248,7 +1243,7 @@ Seaborn functions work **column-wise**, reducing boilerplate code.
 </div>
 </div>
 <p>You can also color by category:</p>
-<div id="ce37478d" class="cell" data-execution_count="29">
+<div id="68a3f161" class="cell" data-execution_count="29">
 <div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>sns.pairplot(penguins, hue<span class="op">=</span><span class="st">"species"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
@@ -1262,7 +1257,7 @@ Seaborn functions work **column-wise**, reducing boilerplate code.
 <section id="jointplot" class="level3" data-number="10.4">
 <h3 data-number="10.4" class="anchored" data-anchor-id="jointplot"><span class="header-section-number">10.4</span> <code>jointplot</code></h3>
 <p>A combination of scatter + distribution plots.</p>
-<div id="5ff1ee47" class="cell" data-execution_count="30">
+<div id="63c3fa69" class="cell" data-execution_count="30">
 <div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>sns.jointplot(</span>
 <span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>    data<span class="op">=</span>penguins,</span>
 <span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>    x<span class="op">=</span><span class="st">"bill_length_mm"</span>,</span>
@@ -1278,7 +1273,7 @@ Seaborn functions work **column-wise**, reducing boilerplate code.
 </div>
 </div>
 <p>Kinds include: <code>scatter</code>, <code>kde</code>, <code>hist</code>, <code>hex</code>, <code>reg</code>.</p>
-<div id="d9a0d1af" class="cell" data-execution_count="31">
+<div id="b8cbcdc1" class="cell" data-execution_count="31">
 <div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>sns.jointplot(data<span class="op">=</span>penguins,</span>
 <span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>    x<span class="op">=</span><span class="st">"flipper_length_mm"</span>,</span>
 <span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>    y<span class="op">=</span><span class="st">"bill_length_mm"</span>, hue<span class="op">=</span><span class="st">"species"</span>, kind<span class="op">=</span><span class="st">"hist"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1295,7 +1290,7 @@ Seaborn functions work **column-wise**, reducing boilerplate code.
 <section id="customizing-with-matplotlib" class="level2" data-number="11">
 <h2 data-number="11" class="anchored" data-anchor-id="customizing-with-matplotlib"><span class="header-section-number">11</span> Customizing with Matplotlib</h2>
 <p>Seaborn plots return Matplotlib Axes objects, so customization is simple.</p>
-<div id="a068a8f1" class="cell" data-execution_count="32">
+<div id="05482695" class="cell" data-execution_count="32">
 <div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> sns.scatterplot(</span>
 <span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>    data<span class="op">=</span>penguins,</span>
 <span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>    x<span class="op">=</span><span class="st">"body_mass_g"</span>,</span>
@@ -1318,7 +1313,7 @@ Seaborn functions work **column-wise**, reducing boilerplate code.
 </section>
 <section id="saving-figures" class="level2" data-number="12">
 <h2 data-number="12" class="anchored" data-anchor-id="saving-figures"><span class="header-section-number">12</span> Saving Figures</h2>
-<div id="55972201" class="cell" data-execution_count="33">
+<div id="9fba56b2" class="cell" data-execution_count="33">
 <div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> sns.histplot(</span>
 <span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>    data<span class="op">=</span>penguins,</span>
 <span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>    x<span class="op">=</span><span class="st">"body_mass_g"</span></span>

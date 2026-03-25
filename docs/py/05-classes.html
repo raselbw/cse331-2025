@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Md Rasel Biswas">
 
 <title>5 Classes – Python for Data Science</title>
 <style>
@@ -113,10 +114,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <meta property="og:title" content="5 Classes – Python for Data Science">
-<meta property="og:description" content="The course site for CSE331 at ISRT, University of Dhaka">
+<meta property="og:description" content="(CSE331) Python for Data Science">
 <meta property="og:site_name" content="Python for Data Science">
 <meta name="twitter:title" content="5 Classes – Python for Data Science">
-<meta name="twitter:description" content="The course site for CSE331 at ISRT, University of Dhaka">
+<meta name="twitter:description" content="(CSE331) Python for Data Science">
 <meta name="twitter:card" content="summary">
 </head>
 
@@ -471,16 +472,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#circle-class-version-1" id="toc-circle-class-version-1" class="nav-link active" data-scroll-target="#circle-class-version-1">Circle Class: Version 1</a>
-  <ul class="collapse">
-  <li><a href="#creating-instances-of-a-class" id="toc-creating-instances-of-a-class" class="nav-link" data-scroll-target="#creating-instances-of-a-class">Creating Instances of a Class</a></li>
-  <li><a href="#changing-attribute-values" id="toc-changing-attribute-values" class="nav-link" data-scroll-target="#changing-attribute-values">Changing Attribute Values</a></li>
-  <li><a href="#creating-multiple-instances" id="toc-creating-multiple-instances" class="nav-link" data-scroll-target="#creating-multiple-instances">Creating Multiple Instances</a></li>
-  </ul></li>
-  <li><a href="#circle-class-version-2" id="toc-circle-class-version-2" class="nav-link" data-scroll-target="#circle-class-version-2">Circle Class: Version 2</a>
-  <ul class="collapse">
-  <li><a href="#constructors" id="toc-constructors" class="nav-link" data-scroll-target="#constructors">Constructors</a></li>
-  </ul></li>
+  <li><a href="#circle-class-version-1" id="toc-circle-class-version-1" class="nav-link active" data-scroll-target="#circle-class-version-1">Circle Class: Version 1</a></li>
+  <li><a href="#circle-class-version-2" id="toc-circle-class-version-2" class="nav-link" data-scroll-target="#circle-class-version-2">Circle Class: Version 2</a></li>
   <li><a href="#circle-class-version-3" id="toc-circle-class-version-3" class="nav-link" data-scroll-target="#circle-class-version-3">Circle Class: Version 3</a></li>
   <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">Exercises</a></li>
   </ul>
@@ -493,12 +486,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../py/01-start-py.html">Python Programming</a></li><li class="breadcrumb-item"><a href="../py/05-classes.html">5 Classes</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">5 Classes</h1>
+<p class="subtitle lead">(CSE331) Python for Data Science</p>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Md Rasel Biswas </p>
+          </div>
+  </div>
     
   
     
@@ -513,10 +513,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 <p>A <strong>class</strong> is a programmer-defined data type. Python and its external packages contain many useful data types, but classes allow a programmer to create custom data types that are tailored to specific use-cases. Classes can contain functions, called <strong>methods</strong> as well as variables, called <strong>attributes</strong>. Classes are defined using the <code>class</code> keyword.</p>
 <p>In this lesson, we will create a simple class called <code>circle</code>. Objects of this data type are intended to represent geometric circles. We will define our circle class in steps. At each step, our class will become slightly more complex.</p>
-<section id="circle-class-version-1" class="level2">
-<h2 class="anchored" data-anchor-id="circle-class-version-1">Circle Class: Version 1</h2>
+<section id="circle-class-version-1" class="level3">
+<h3 class="anchored" data-anchor-id="circle-class-version-1">Circle Class: Version 1</h3>
 <p>We will start will a very basic version that contains three attributes, <code>r</code>, <code>x</code>, and <code>y</code>. The attribute <code>r</code> is intended to store the radius of the circle, while <code>x</code> and <code>y</code> store the coordinates of the circle’s center point. Our class will also contain a single method, called <code>area</code>. This will return the area of the circle, rounded to two decimal places.</p>
-<div id="c8e33cd8" class="cell" data-execution_count="1">
+<div id="c44a3f83" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Version 1</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Circle:</span>
@@ -530,10 +530,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="bu">round</span>(pi <span class="op">*</span> <span class="va">self</span>.r<span class="op">**</span><span class="dv">2</span>, <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Notice the references to the parameter <code>self</code> in the <code>area</code> method. This will refer to the instance of <code>circle</code> from which the <code>area</code> method is called. We will say more about this in a moment.</p>
-<section id="creating-instances-of-a-class" class="level3">
-<h3 class="anchored" data-anchor-id="creating-instances-of-a-class">Creating Instances of a Class</h3>
+<section id="creating-instances-of-a-class" class="level4">
+<h4 class="anchored" data-anchor-id="creating-instances-of-a-class">Creating Instances of a Class</h4>
 <p>A class is simply a template. Defining a class does not create any instances of that type. We will now create an instance of our <code>circle</code> class, storing it in a variable named <code>c1</code>.</p>
-<div id="4ca50452" class="cell" data-execution_count="2">
+<div id="816880e7" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>c1 <span class="op">=</span> Circle()</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(c1))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -542,7 +542,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>Notice that we can directly access the attributes of the class by following the class name with a period, and then the name of the attribute.</p>
-<div id="97f0cac0" class="cell" data-execution_count="3">
+<div id="5b144d60" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'c1 radius:'</span>, c1.r)</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'c1 center: ('</span>, c1.x, <span class="st">','</span>, c1.y, <span class="st">')'</span>, sep<span class="op">=</span><span class="st">''</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -551,7 +551,7 @@ c1 center: (0,0)</code></pre>
 </div>
 </div>
 <p>We can use a similar format to call a method belonging to a class instance.</p>
-<div id="86daf0e1" class="cell" data-execution_count="4">
+<div id="b1917760" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Area of c1:'</span>, c1.area())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Area of c1: 78.54</code></pre>
@@ -560,10 +560,10 @@ c1 center: (0,0)</code></pre>
 <p>Notice that when we defined the <code>area()</code> method, we specified that it was to accept one parameter, named <code>self</code>. But when we called area, we apparently did not provide it with any arguments. In fact, we did. The class instance that the method is called from is always passed in as the first argument of the method. So, when we type <code>c1.area()</code>, the <code>circle</code> object <code>c1</code> is plugged in for the <code>self</code> parameter of <code>area</code>, and then when we encounter the expression <code>self.r</code> within this method, it is interpreted as <code>c1.r</code>.</p>
 <p>Every method within a class should have a <code>self</code> parameter that appears first within the parameter list. And <code>self</code> will always refer to the class instance from which the method was called.</p>
 </section>
-<section id="changing-attribute-values" class="level3">
-<h3 class="anchored" data-anchor-id="changing-attribute-values">Changing Attribute Values</h3>
+<section id="changing-attribute-values" class="level4">
+<h4 class="anchored" data-anchor-id="changing-attribute-values">Changing Attribute Values</h4>
 <p>Our circle <code>c1</code> has the default radius of <code>5</code>. We can change this by directly changing the value of <code>c1.r</code>.</p>
-<div id="72b9d26f" class="cell" data-execution_count="5">
+<div id="95549dfb" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>c1.r <span class="op">=</span> <span class="dv">7</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Area of c1:'</span>, c1.area())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -571,10 +571,10 @@ c1 center: (0,0)</code></pre>
 </div>
 </div>
 </section>
-<section id="creating-multiple-instances" class="level3">
-<h3 class="anchored" data-anchor-id="creating-multiple-instances">Creating Multiple Instances</h3>
+<section id="creating-multiple-instances" class="level4">
+<h4 class="anchored" data-anchor-id="creating-multiple-instances">Creating Multiple Instances</h4>
 <p>We can create as many instances of a class as we would like. Each such instance will be a separate object, with its own attributes and methods.</p>
-<div id="c101d275" class="cell" data-execution_count="6">
+<div id="ecde5cc2" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>c2 <span class="op">=</span> Circle()</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>c2.r <span class="op">=</span> <span class="dv">3</span></span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -587,13 +587,13 @@ c2 radius: 3</code></pre>
 </div>
 </section>
 </section>
-<section id="circle-class-version-2" class="level2">
-<h2 class="anchored" data-anchor-id="circle-class-version-2">Circle Class: Version 2</h2>
+<section id="circle-class-version-2" class="level3">
+<h3 class="anchored" data-anchor-id="circle-class-version-2">Circle Class: Version 2</h3>
 <p>Notice that each of our circles starts out with a default radius of 5, and a center at (0,0). We can easily change these, but it would be helpful if we could specify the desired values when creating an instance of <code>circle</code>. We will now update our circle class to allow us to do just that.</p>
-<section id="constructors" class="level3">
-<h3 class="anchored" data-anchor-id="constructors">Constructors</h3>
+<section id="constructors" class="level4">
+<h4 class="anchored" data-anchor-id="constructors">Constructors</h4>
 <p>A <strong>constructor</strong> is a method that is called when an instance of a class is created. It is intended to perform the initialization of the class object. In Python, constructors should always have the special name <code>__init__()</code>. The constructor must accept <code>self</code> as a parameter, but can also accept additional parameters to be used during initialization.</p>
-<div id="812c5f89" class="cell" data-execution_count="7">
+<div id="9f008198" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Circle:</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, x, y, r):</span>
@@ -606,7 +606,7 @@ c2 radius: 3</code></pre>
 <span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> pi <span class="op">*</span> <span class="va">self</span>.r<span class="op">**</span><span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>When a class object is created, the constructor is immediately called the object is passed to the constructor, along with any other arguments that were listed between the parentheses when the object was created. Below, we will create a circle with a center at (5,2), and a radius of 6.</p>
-<div id="aa211cc4" class="cell" data-execution_count="8">
+<div id="729d3627" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>c3 <span class="op">=</span> Circle(<span class="dv">5</span>, <span class="dv">2</span>, <span class="dv">6</span>)</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'c3 radius:'</span>, c3.r)</span>
@@ -619,8 +619,8 @@ c3 center: (5,2)</code></pre>
 <p>This provides us with much more flexibility when creating instances of the <code>circle</code> class.</p>
 </section>
 </section>
-<section id="circle-class-version-3" class="level2">
-<h2 class="anchored" data-anchor-id="circle-class-version-3">Circle Class: Version 3</h2>
+<section id="circle-class-version-3" class="level3">
+<h3 class="anchored" data-anchor-id="circle-class-version-3">Circle Class: Version 3</h3>
 <p>Let’s complete our circle class by adding four new methods: <code>contains()</code>, <code>intersect()</code>, <code>copy()</code>, and <code>__str__()</code>.</p>
 <ul>
 <li><code>contains()</code> will check to see whether or not a provided point is inside the circle.</li>
@@ -629,7 +629,7 @@ c3 center: (5,2)</code></pre>
 <li><code>__str__()</code> is used to display information about the center and radius of the circle.</li>
 </ul>
 <p>We will discuss each of these methods in more detail after providing the definition of the class.</p>
-<div id="182b99cf" class="cell" data-execution_count="9">
+<div id="137b4185" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Circle:</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, x, y, r):</span>
@@ -669,12 +669,12 @@ c3 center: (5,2)</code></pre>
 <span id="cb15-37"><a href="#cb15-37" aria-hidden="true" tabindex="-1"></a>        out <span class="op">+=</span> <span class="ss">f'Radius: </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>r<span class="sc">}</span><span class="ss">'</span></span>
 <span id="cb15-38"><a href="#cb15-38" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> out</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<section id="the-contains-method" class="level4">
-<h4 class="anchored" data-anchor-id="the-contains-method">The contains() Method</h4>
+<section id="the-contains-method" class="level5">
+<h5 class="anchored" data-anchor-id="the-contains-method">The contains() Method</h5>
 <p>The <code>contains()</code> method accepts three parameters: <code>self</code>, <code>x</code>, and <code>y</code>. The parameter <code>self</code> is expected to be an instance of the <code>Circle</code> class. The parameters <code>x</code> and <code>y</code> are expected to be the coordinates of a point. This method returns <code>True</code> if the point provided lies inside the circle, and return <code>False</code> otherwise. This is accomplished by calculating the distance between the center of the circle and the new point. The point lies inside the circle if and only if that distance is less than the radius.</p>
 <p>Notice that the <code>contains()</code> method accepts two parameters named <code>x</code> and <code>y</code>, and recall that each <code>circle</code> object has attributes named <code>x</code> and <code>y</code>. Within the method, the attributes will be stored in <code>self.x</code> and <code>self.y</code>. These will be distinct from the values of the parameters <code>x</code> and <code>y</code>. These parameter values will be created in a local scope when the method is called, and will disappear when the function finishes executing. The attributes, on the other hand, will persist as part of the object itself.</p>
 <p>Let’s now test this method.</p>
-<div id="b7036cc2" class="cell" data-execution_count="10">
+<div id="8d6b626d" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>c4 <span class="op">=</span> Circle(<span class="dv">16</span>, <span class="dv">20</span>, <span class="dv">4</span>)</span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(c4.contains(<span class="dv">18</span>, <span class="dv">21</span>))</span>
@@ -685,11 +685,11 @@ False</code></pre>
 </div>
 </div>
 </section>
-<section id="the-intersect-method" class="level4">
-<h4 class="anchored" data-anchor-id="the-intersect-method">The intersect() Method</h4>
+<section id="the-intersect-method" class="level5">
+<h5 class="anchored" data-anchor-id="the-intersect-method">The intersect() Method</h5>
 <p>The <code>intersect()</code> checks to see if two circles intersect. To accomplish this, the method first calculates the distance between the centers of the circles. If that distance is less than the sum of the circles’ radii and greater than the absolute value of the difference between the radii, then the circles intersect.</p>
 <p>Notice that this method is required to accept two <code>circle</code> objects as arguments. These are referred to as <code>self</code> and <code>other</code> within the function definition. The parameter <code>self</code> will, as always, reference to the <code>circle</code> instance from which the method was called. The object <code>other</code> will be provided to the method by listing it between the parentheses.</p>
-<div id="59fb7669" class="cell" data-execution_count="11">
+<div id="7335257c" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>c5 <span class="op">=</span> Circle(x<span class="op">=</span><span class="dv">0</span>, y<span class="op">=</span><span class="dv">0</span>, r<span class="op">=</span><span class="dv">4</span>)</span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>c6 <span class="op">=</span> Circle(x<span class="op">=</span><span class="dv">4</span>, y<span class="op">=</span><span class="dv">2</span>, r<span class="op">=</span><span class="dv">6</span>)</span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>c7 <span class="op">=</span> Circle(x<span class="op">=</span><span class="dv">5</span>, y<span class="op">=</span><span class="dv">4</span>, r<span class="op">=</span><span class="dv">1</span>)</span>
@@ -704,10 +704,10 @@ c6 and c7 intersect: False</code></pre>
 </div>
 </div>
 </section>
-<section id="the-copy-method" class="level4">
-<h4 class="anchored" data-anchor-id="the-copy-method">The copy() Method</h4>
+<section id="the-copy-method" class="level5">
+<h5 class="anchored" data-anchor-id="the-copy-method">The copy() Method</h5>
 <p>As is the case with lists, when we set a variable equal to another variable containing a class instance, the new variable will refer to the currently existing instance rather than a copy of that instance. We will demonstrate this below.</p>
-<div id="c401e021" class="cell" data-execution_count="12">
+<div id="2fbf618d" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>c8 <span class="op">=</span> c7</span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>c8.r <span class="op">=</span> <span class="dv">3</span></span>
 <span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -719,7 +719,7 @@ c8 radius: 3</code></pre>
 </div>
 </div>
 <p>We can copy instances of a class by providing them with a <code>copy()</code> method, as we have done with the <code>Circle</code> class. This method creates and returns a new instance of the class with the same attribute values as the instance from which it was called. We will now demonstrate that this does, in fact, create a new instance of the class.</p>
-<div id="e409d377" class="cell" data-execution_count="13">
+<div id="ec00d73c" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>c9 <span class="op">=</span> c8.copy()</span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>c9.r <span class="op">=</span> <span class="dv">9</span></span>
 <span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -731,11 +731,11 @@ c9 radius: 9</code></pre>
 </div>
 </div>
 </section>
-<section id="the-__str__-method" class="level4">
-<h4 class="anchored" data-anchor-id="the-__str__-method">The <code>__str__()</code> Method</h4>
+<section id="the-__str__-method" class="level5">
+<h5 class="anchored" data-anchor-id="the-__str__-method">The <code>__str__()</code> Method</h5>
 <p>Let <code>__init__()</code>, the <code>__str__()</code> method is a special method that can belong to any class, and that performs a specific function. Generally speaking, the <code>__str__()</code> method should return a string that contains some information about a particular instance of the class. This method is called whenever an instance of the class is passed to the <code>print()</code> function. In that case, the string returned by the <code>__str__()</code> method is what is actually displayed.</p>
 <p>Notice that the <code>__str__()</code> method for the <code>Circle</code> is a string that states the center and radius of a <code>Circle</code> instance. We will now call print on a <code>Circle</code> object to confirm that this information is what is actually displayed.</p>
-<div id="859dd0b9" class="cell" data-execution_count="14">
+<div id="dc833a62" class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(c9)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Center: (3, 5)
@@ -744,10 +744,10 @@ Radius: 9</code></pre>
 </div>
 </section>
 </section>
-<section id="exercises" class="level2">
-<h2 class="anchored" data-anchor-id="exercises">Exercises</h2>
-<section id="rectangle-class" class="level4">
-<h4 class="anchored" data-anchor-id="rectangle-class">1. Rectangle Class</h4>
+<section id="exercises" class="level3">
+<h3 class="anchored" data-anchor-id="exercises">Exercises</h3>
+<section id="rectangle-class" class="level5">
+<h5 class="anchored" data-anchor-id="rectangle-class">1. Rectangle Class</h5>
 <p>Create a class <code>Rectangle</code> with attributes <code>length</code> and <code>width</code>.</p>
 <ul>
 <li>Add methods <code>area()</code> and <code>perimeter()</code>.<br>
@@ -756,8 +756,8 @@ Radius: 9</code></pre>
 </ul>
 <hr>
 </section>
-<section id="student-class" class="level4">
-<h4 class="anchored" data-anchor-id="student-class">2. Student Class</h4>
+<section id="student-class" class="level5">
+<h5 class="anchored" data-anchor-id="student-class">2. Student Class</h5>
 <p>Define a class <code>Student</code> with attributes <code>name</code>, <code>roll</code>, and <code>marks</code> (a list of numbers).</p>
 <ul>
 <li>Add a method <code>average()</code> to return the average mark.</li>
@@ -766,8 +766,8 @@ Radius: 9</code></pre>
 </ul>
 <hr>
 </section>
-<section id="bank-account-class" class="level4">
-<h4 class="anchored" data-anchor-id="bank-account-class">3. Bank Account Class</h4>
+<section id="bank-account-class" class="level5">
+<h5 class="anchored" data-anchor-id="bank-account-class">3. Bank Account Class</h5>
 <p>Write a class <code>BankAccount</code> with attributes <code>owner</code> and <code>balance</code>.</p>
 <ul>
 <li><p>Add methods:</p>
@@ -780,8 +780,8 @@ Radius: 9</code></pre>
 </ul>
 <hr>
 </section>
-<section id="circle-extension" class="level4">
-<h4 class="anchored" data-anchor-id="circle-extension">4. Circle Extension</h4>
+<section id="circle-extension" class="level5">
+<h5 class="anchored" data-anchor-id="circle-extension">4. Circle Extension</h5>
 <p>Extend the <code>Circle</code> class by adding:</p>
 <ul>
 <li>A method <code>diameter()</code> that returns the diameter.</li>
@@ -790,8 +790,8 @@ Radius: 9</code></pre>
 <p>Test the methods with one circle.</p>
 <hr>
 </section>
-<section id="class-interaction-player" class="level4">
-<h4 class="anchored" data-anchor-id="class-interaction-player">5. Class Interaction (Player)</h4>
+<section id="class-interaction-player" class="level5">
+<h5 class="anchored" data-anchor-id="class-interaction-player">5. Class Interaction (Player)</h5>
 <p>Suppose you are designing a game. Each <strong>Player</strong> has:</p>
 <ul>
 <li>a <code>name</code>,</li>
@@ -799,110 +799,6 @@ Radius: 9</code></pre>
 <li>and a method <code>attack(other, damage)</code> which reduces the health of another player.</li>
 </ul>
 <p>Write the <code>Player</code> class and demonstrate two players attacking each other.</p>
-<!--
-## Application: Sensor Network
-
-### 1. Generating random sensor network
-
-::: {#0134c420 .cell execution_count=15}
-``` {.python .cell-code}
-import numpy as np
-
-np.random.seed(1)
-n = 40
-x_array = np.random.uniform(0, 100, n)
-y_array = np.random.uniform(0, 100, n)
-r_array = np.random.uniform(10, 16, n)
-```
-:::
-
-
-- We simulate 40 sensors.
-- Each sensor has:  
-  - A random x, y location between 0 and 100 (so we’re placing them in a 100 × 100 square region).
-  - A random radius between 10 and 16 (coverage distance).  
-- So effectively, we now have 40 circles scattered across a square.
-
-::: {#da7bc804 .cell execution_count=16}
-``` {.python .cell-code}
-import matplotlib.pyplot as plt
-
-plt.figure(figsize=[10,10])
-ax = plt.gca()
-plt.scatter(x_array, y_array, edgecolor='k', s=100)
-for i in range(n):
-    ax.add_artist(plt.Circle((x_array[i],y_array[i]), r_array[i], color='cornflowerblue', alpha=0.2))
-plt.show()
-```
-
-::: {.cell-output .cell-output-display}
-![](05-classes_files/figure-html/cell-17-output-1.png){width=799 height=781}
-:::
-:::
-
-
-- The scatter plot shows sensor centers (black-outlined dots). Each sensor’s coverage region is drawn as a translucent blue circle. This way, you can see overlaps and gaps in the sensor network visually.
-
-### 2. Creating Circle objects for each sensor
-
-::: {#19f27ed6 .cell execution_count=17}
-``` {.python .cell-code}
-site_list = []
-for i in range(n):
-    temp = Circle(x_array[i], y_array[i], r_array[i])
-    site_list.append(temp)   
-```
-:::
-
-
-* Here we convert the raw arrays into **Circle objects**
-* Each object knows:  
-  * its center (`x`, `y`),
-  * its radius (`r`),
-  * and it has methods like `contains()` and `overlaps()`.
-* The list `site_list` is our **sensor network** in object-oriented form.
-
-### 3. Counting coverage at a given point
-
-::: {#a0664a5a .cell execution_count=18}
-``` {.python .cell-code}
-def count_sites(site_list, x, y):
-    site_count = 0
-    for i in range(len(site_list)):
-        if(site_list[i].contains(x, y)):
-            site_count += 1
-
-    return site_count
-```
-:::
-
-
-* `count_sites()` takes:  
-  * `site_list`: all the sensors (circles)
-  * `(x, y)`: a location to test  
-* It loops through every circle and checks: 
-  * Does this sensor’s coverage include the point `(x, y)`?
-  * If yes → add 1 to `site_count`. 
-* Finally, it returns **how many sensors cover that location**.
-
-::: {#2afbf404 .cell execution_count=19}
-``` {.python .cell-code}
-print(count_sites(site_list, 20, 82))
-print(count_sites(site_list, 60, 50))
-print(count_sites(site_list, 80, 90))
-```
-
-::: {.cell-output .cell-output-stdout}
-```
-4
-0
-1
-```
-:::
-:::
-
-
---->
 
 
 </section>

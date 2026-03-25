@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Md Rasel Biswas">
 
 <title>15 Matplotlib – Python for Data Science</title>
 <style>
@@ -113,13 +114,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <meta property="og:title" content="15 Matplotlib – Python for Data Science">
-<meta property="og:description" content="The course site for CSE331 at ISRT, University of Dhaka">
+<meta property="og:description" content="(CSE331) Python for Data Science">
 <meta property="og:image" content="https://cse331.netlify.app/py/15-plt_files/figure-html/cell-4-output-1.png">
 <meta property="og:site_name" content="Python for Data Science">
 <meta property="og:image:height" content="674">
 <meta property="og:image:width" content="818">
 <meta name="twitter:title" content="15 Matplotlib – Python for Data Science">
-<meta name="twitter:description" content="The course site for CSE331 at ISRT, University of Dhaka">
+<meta name="twitter:description" content="(CSE331) Python for Data Science">
 <meta name="twitter:image" content="https://cse331.netlify.app/py/15-plt_files/figure-html/cell-4-output-1.png">
 <meta name="twitter:image-height" content="674">
 <meta name="twitter:image-width" content="818">
@@ -506,12 +507,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../py/08-arrays-1d.html">Python for Data Science</a></li><li class="breadcrumb-item"><a href="../py/15-plt.html">15 Matplotlib</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">15 Matplotlib</h1>
+<p class="subtitle lead">(CSE331) Python for Data Science</p>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Md Rasel Biswas </p>
+          </div>
+  </div>
     
   
     
@@ -545,7 +553,7 @@ Most high-level visualization libraries rely on Matplotlib internally, including
 <p>Students familiar with <strong>ggplot2</strong> often find Matplotlib more verbose.<br>
 This is because Matplotlib follows a <strong>step-by-step, imperative approach</strong>, rather than the declarative <em>grammar of graphics</em> philosophy.</p>
 <p>The conventional import is:</p>
-<div id="d092d394" class="cell" data-execution_count="2">
+<div id="6d932715" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <hr>
@@ -553,7 +561,7 @@ This is because Matplotlib follows a <strong>step-by-step, imperative approach</
 <section id="a-first-look-the-pyplot-style" class="level2" data-number="2">
 <h2 data-number="2" class="anchored" data-anchor-id="a-first-look-the-pyplot-style"><span class="header-section-number">2</span> A First Look: The Pyplot Style</h2>
 <p>Matplotlib can operate in a <strong>stateful mode</strong>, where commands modify a <em>current active figure</em>.</p>
-<div id="decfd060" class="cell" data-execution_count="3">
+<div id="b6f9c487" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>]</span>
@@ -599,7 +607,7 @@ This is because Matplotlib follows a <strong>step-by-step, imperative approach</
 <li>one or more <strong>Axes</strong> (actual plotting regions)</li>
 </ul>
 <p>This is done using <code>plt.subplots()</code>.</p>
-<div id="149aa7ca" class="cell" data-execution_count="4">
+<div id="0c1b49e9" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
@@ -625,7 +633,7 @@ This is because Matplotlib follows a <strong>step-by-step, imperative approach</
 <section id="a-basic-line-plot" class="level2" data-number="5">
 <h2 data-number="5" class="anchored" data-anchor-id="a-basic-line-plot"><span class="header-section-number">5</span> A Basic Line Plot</h2>
 <p>We begin with the simplest possible example.</p>
-<div id="671cf84b" class="cell" data-execution_count="5">
+<div id="f048aa3a" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>]</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> [<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">5</span>]</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -651,7 +659,7 @@ This is because Matplotlib follows a <strong>step-by-step, imperative approach</
 <section id="changing-the-plot-type" class="level2" data-number="6">
 <h2 data-number="6" class="anchored" data-anchor-id="changing-the-plot-type"><span class="header-section-number">6</span> Changing the Plot Type</h2>
 <p>To change the chart type, we change <strong>only the method</strong>, not the structure.</p>
-<div id="993f8d5d" class="cell" data-execution_count="6">
+<div id="7dc41379" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots()</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>ax.scatter(x, y)</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -666,7 +674,7 @@ This is because Matplotlib follows a <strong>step-by-step, imperative approach</
 </div>
 <p>The structure remains identical. Only the plotting method changes.</p>
 <p>Explicit argument naming is often clearer:</p>
-<div id="b9a3a0e0" class="cell" data-execution_count="7">
+<div id="42b1d38f" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>ax.scatter(x<span class="op">=</span>x, y<span class="op">=</span>y, color<span class="op">=</span><span class="st">"red"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <hr>
@@ -674,7 +682,7 @@ This is because Matplotlib follows a <strong>step-by-step, imperative approach</
 <section id="working-with-a-real-dataset" class="level2" data-number="7">
 <h2 data-number="7" class="anchored" data-anchor-id="working-with-a-real-dataset"><span class="header-section-number">7</span> Working with a Real Dataset</h2>
 <p>Now we move from toy data to a small dataset, and create a horizontal bar plot.</p>
-<div id="3c678c76" class="cell" data-execution_count="8">
+<div id="16e58e07" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -706,7 +714,7 @@ This is because Matplotlib follows a <strong>step-by-step, imperative approach</
 <section id="customizing-appearance" class="level2" data-number="8">
 <h2 data-number="8" class="anchored" data-anchor-id="customizing-appearance"><span class="header-section-number">8</span> Customizing Appearance</h2>
 <p>Matplotlib allows precise control over visual elements.</p>
-<div id="36d205e9" class="cell" data-execution_count="9">
+<div id="a6e93642" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">6</span>, <span class="dv">4</span>))</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>ax.plot(x, y, marker<span class="op">=</span><span class="st">"o"</span>, linewidth<span class="op">=</span><span class="dv">2</span>)</span>
@@ -718,7 +726,7 @@ This is because Matplotlib follows a <strong>step-by-step, imperative approach</
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="15-plt_files/figure-html/cell-10-output-1.png" width="517" height="381" class="figure-img"></p>
+<p><img src="15-plt_files/figure-html/cell-10-output-1.png" width="515" height="376" class="figure-img"></p>
 </figure>
 </div>
 </div>
@@ -729,7 +737,7 @@ This is because Matplotlib follows a <strong>step-by-step, imperative approach</
 <section id="multiple-panels-subplots" class="level2" data-number="9">
 <h2 data-number="9" class="anchored" data-anchor-id="multiple-panels-subplots"><span class="header-section-number">9</span> Multiple Panels (Subplots)</h2>
 <p>This is where the OO interface becomes indispensable.</p>
-<div id="5ff6b52a" class="cell" data-execution_count="10">
+<div id="c86ae6e7" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">50</span>)</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>fig, axes <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">3</span>))</span>
@@ -756,19 +764,19 @@ This is because Matplotlib follows a <strong>step-by-step, imperative approach</
 <section id="styles-in-matplotlib" class="level2" data-number="10">
 <h2 data-number="10" class="anchored" data-anchor-id="styles-in-matplotlib"><span class="header-section-number">10</span> Styles in Matplotlib</h2>
 <p>Matplotlib includes predefined style sheets.</p>
-<div id="85a5a795" class="cell" data-execution_count="11">
+<div id="f8776734" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>plt.style.use(<span class="st">"ggplot"</span>)   <span class="co"># Optional</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Styles can improve appearance quickly, but for academic work, <strong>explicit control is preferred</strong>.</p>
 <p>Available styles:</p>
-<div id="9ae08d77" class="cell" data-execution_count="12">
+<div id="144d3a5d" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>plt.style.available</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <hr>
 </section>
 <section id="saving-figures" class="level2" data-number="11">
 <h2 data-number="11" class="anchored" data-anchor-id="saving-figures"><span class="header-section-number">11</span> Saving Figures</h2>
-<div id="5146c0b2" class="cell" data-execution_count="13">
+<div id="6c77be6b" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots()</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>ax.plot([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>], [<span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">9</span>])</span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -791,14 +799,14 @@ This is because Matplotlib follows a <strong>step-by-step, imperative approach</
 <h2 data-number="12" class="anchored" data-anchor-id="quick-examples"><span class="header-section-number">12</span> Quick Examples</h2>
 <section id="histogram" class="level3" data-number="12.1">
 <h3 data-number="12.1" class="anchored" data-anchor-id="histogram"><span class="header-section-number">12.1</span> Histogram</h3>
-<div id="7c27c055" class="cell" data-execution_count="14">
+<div id="88dbf331" class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots()</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>ax.hist(np.random.randn(<span class="dv">200</span>), bins<span class="op">=</span><span class="dv">20</span>)</span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="15-plt_files/figure-html/cell-15-output-1.png" width="418" height="337" class="figure-img"></p>
+<p><img src="15-plt_files/figure-html/cell-15-output-1.png" width="418" height="340" class="figure-img"></p>
 </figure>
 </div>
 </div>
@@ -806,7 +814,7 @@ This is because Matplotlib follows a <strong>step-by-step, imperative approach</
 </section>
 <section id="boxplot" class="level3" data-number="12.2">
 <h3 data-number="12.2" class="anchored" data-anchor-id="boxplot"><span class="header-section-number">12.2</span> Boxplot</h3>
-<div id="cf3ec68c" class="cell" data-execution_count="15">
+<div id="8e1b9e68" class="cell" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots()</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>ax.boxplot([np.random.randn(<span class="dv">100</span>), np.random.randn(<span class="dv">100</span>) <span class="op">+</span> <span class="dv">1</span>])</span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -821,7 +829,7 @@ This is because Matplotlib follows a <strong>step-by-step, imperative approach</
 </section>
 <section id="bar-plot" class="level3" data-number="12.3">
 <h3 data-number="12.3" class="anchored" data-anchor-id="bar-plot"><span class="header-section-number">12.3</span> Bar Plot</h3>
-<div id="64fab209" class="cell" data-execution_count="16">
+<div id="194475a2" class="cell" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame({</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Group"</span>: [<span class="st">"A"</span>, <span class="st">"B"</span>, <span class="st">"C"</span>, <span class="st">"D"</span>, <span class="st">"E"</span>],</span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Value"</span>: [<span class="dv">1</span>, <span class="dv">5</span>, <span class="dv">4</span>, <span class="dv">3</span>, <span class="dv">9</span>]</span>
@@ -841,7 +849,7 @@ This is because Matplotlib follows a <strong>step-by-step, imperative approach</
 </section>
 <section id="pie-chart" class="level3" data-number="12.4">
 <h3 data-number="12.4" class="anchored" data-anchor-id="pie-chart"><span class="header-section-number">12.4</span> Pie Chart</h3>
-<div id="49442dc2" class="cell" data-execution_count="17">
+<div id="98290bb2" class="cell" data-execution_count="17">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots()</span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>ax.pie(df.Value, labels<span class="op">=</span>df.Group, autopct<span class="op">=</span><span class="st">"</span><span class="sc">%1.1f%%</span><span class="st">"</span>)</span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -871,7 +879,7 @@ This is because Matplotlib follows a <strong>step-by-step, imperative approach</
 <p>This structure scales naturally from simple plots to <strong>publication-quality multi-panel figures</strong>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/meme.jpeg" class="img-fluid figure-img" style="width:50.0%"></p>
+<p><img src="images/meme.jpeg" class="img-fluid figure-img" style="width:55.0%"></p>
 <figcaption>© Yan Holtz</figcaption>
 </figure>
 </div>

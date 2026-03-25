@@ -4,6 +4,5 @@
 /home                              / 301!
 http://cse331.netlify.app/*        https://cse331.netlify.app/:splat  301!
 
-# Learn more: https://docs.netlify.com/routing/redirects/redirect-options
-# Rewrite a path without changing the URL
-# /project450/*    https://rasel-b.github.io/project450_book/:splat  200!
+https://cse331.netlify.app/batch29         https://raselbw.github.io/cse331-2025
+https://cse331.netlify.app/2025            https://raselbw.github.io/cse331-2025   

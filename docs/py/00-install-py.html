@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Md Rasel Biswas">
 
 <title>Python and Jupyter Notebook – Python for Data Science</title>
 <style>
@@ -113,13 +114,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <meta property="og:title" content="Python and Jupyter Notebook – Python for Data Science">
-<meta property="og:description" content="The course site for CSE331 at ISRT, University of Dhaka">
+<meta property="og:description" content="(CSE331) Python for Data Science">
 <meta property="og:image" content="https://cse331.netlify.app/py/images/python-repl.png">
 <meta property="og:site_name" content="Python for Data Science">
 <meta property="og:image:height" content="511">
 <meta property="og:image:width" content="1368">
 <meta name="twitter:title" content="Python and Jupyter Notebook – Python for Data Science">
-<meta name="twitter:description" content="The course site for CSE331 at ISRT, University of Dhaka">
+<meta name="twitter:description" content="(CSE331) Python for Data Science">
 <meta name="twitter:image" content="https://cse331.netlify.app/py/images/python-repl.png">
 <meta name="twitter:image-height" content="511">
 <meta name="twitter:image-width" content="1368">
@@ -478,21 +479,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#introduction-to-python" id="toc-introduction-to-python" class="nav-link active" data-scroll-target="#introduction-to-python"><span class="header-section-number">1</span> Introduction to Python</a></li>
-  <li><a href="#why-learn-python-for-data-science" id="toc-why-learn-python-for-data-science" class="nav-link" data-scroll-target="#why-learn-python-for-data-science"><span class="header-section-number">2</span> Why learn Python for Data Science</a>
-  <ul class="collapse">
-  <li><a href="#python-and-the-two-language-problem" id="toc-python-and-the-two-language-problem" class="nav-link" data-scroll-target="#python-and-the-two-language-problem">Python and the “two-language problem”</a></li>
-  </ul></li>
-  <li><a href="#download-install-python" id="toc-download-install-python" class="nav-link" data-scroll-target="#download-install-python"><span class="header-section-number">3</span> Download &amp; Install Python</a></li>
-  <li><a href="#python-interface-python-repl" id="toc-python-interface-python-repl" class="nav-link" data-scroll-target="#python-interface-python-repl"><span class="header-section-number">4</span> Python Interface (Python REPL)</a></li>
-  <li><a href="#scripts-vs.-notebooks" id="toc-scripts-vs.-notebooks" class="nav-link" data-scroll-target="#scripts-vs.-notebooks"><span class="header-section-number">5</span> Scripts vs.&nbsp;Notebooks</a></li>
-  <li><a href="#launch-jupyterlab" id="toc-launch-jupyterlab" class="nav-link" data-scroll-target="#launch-jupyterlab"><span class="header-section-number">6</span> Launch JupyterLab</a></li>
-  <li><a href="#working-with-jupyterlab" id="toc-working-with-jupyterlab" class="nav-link" data-scroll-target="#working-with-jupyterlab"><span class="header-section-number">7</span> Working with JupyterLab</a></li>
-  <li><a href="#creating-and-opening-notebooks" id="toc-creating-and-opening-notebooks" class="nav-link" data-scroll-target="#creating-and-opening-notebooks"><span class="header-section-number">8</span> Creating and Opening Notebooks</a></li>
-  <li><a href="#notebook-building-blocks" id="toc-notebook-building-blocks" class="nav-link" data-scroll-target="#notebook-building-blocks"><span class="header-section-number">9</span> Notebook Building Blocks</a></li>
-  <li><a href="#working-directory-in-jupyter" id="toc-working-directory-in-jupyter" class="nav-link" data-scroll-target="#working-directory-in-jupyter"><span class="header-section-number">10</span> Working Directory in Jupyter</a></li>
-  <li><a href="#listing-files-in-the-current-directory" id="toc-listing-files-in-the-current-directory" class="nav-link" data-scroll-target="#listing-files-in-the-current-directory"><span class="header-section-number">11</span> Listing Files in the Current Directory</a></li>
-  <li><a href="#python-packages-for-data-science" id="toc-python-packages-for-data-science" class="nav-link" data-scroll-target="#python-packages-for-data-science"><span class="header-section-number">12</span> Python Packages for Data Science</a></li>
-  <li><a href="#a-quick-fun-test-emoji" id="toc-a-quick-fun-test-emoji" class="nav-link" data-scroll-target="#a-quick-fun-test-emoji"><span class="header-section-number">13</span> A quick, fun test: emoji</a></li>
+  <li><a href="#why-learn-python-for-data-science" id="toc-why-learn-python-for-data-science" class="nav-link" data-scroll-target="#why-learn-python-for-data-science"><span class="header-section-number">2</span> Why learn Python for Data Science</a></li>
+  <li><a href="#python-and-the-two-language-problem" id="toc-python-and-the-two-language-problem" class="nav-link" data-scroll-target="#python-and-the-two-language-problem"><span class="header-section-number">3</span> Python and the “two-language problem”</a></li>
+  <li><a href="#download-install-python" id="toc-download-install-python" class="nav-link" data-scroll-target="#download-install-python"><span class="header-section-number">4</span> Download &amp; Install Python</a></li>
+  <li><a href="#python-interface-python-repl" id="toc-python-interface-python-repl" class="nav-link" data-scroll-target="#python-interface-python-repl"><span class="header-section-number">5</span> Python Interface (Python REPL)</a></li>
+  <li><a href="#scripts-vs.-notebooks" id="toc-scripts-vs.-notebooks" class="nav-link" data-scroll-target="#scripts-vs.-notebooks"><span class="header-section-number">6</span> Scripts vs.&nbsp;Notebooks</a></li>
+  <li><a href="#launch-jupyterlab" id="toc-launch-jupyterlab" class="nav-link" data-scroll-target="#launch-jupyterlab"><span class="header-section-number">7</span> Launch JupyterLab</a></li>
+  <li><a href="#working-with-jupyterlab" id="toc-working-with-jupyterlab" class="nav-link" data-scroll-target="#working-with-jupyterlab"><span class="header-section-number">8</span> Working with JupyterLab</a></li>
+  <li><a href="#creating-and-opening-notebooks" id="toc-creating-and-opening-notebooks" class="nav-link" data-scroll-target="#creating-and-opening-notebooks"><span class="header-section-number">9</span> Creating and Opening Notebooks</a></li>
+  <li><a href="#notebook-building-blocks" id="toc-notebook-building-blocks" class="nav-link" data-scroll-target="#notebook-building-blocks"><span class="header-section-number">10</span> Notebook Building Blocks</a></li>
+  <li><a href="#working-directory-in-jupyter" id="toc-working-directory-in-jupyter" class="nav-link" data-scroll-target="#working-directory-in-jupyter"><span class="header-section-number">11</span> Working Directory in Jupyter</a></li>
+  <li><a href="#listing-files-in-the-current-directory" id="toc-listing-files-in-the-current-directory" class="nav-link" data-scroll-target="#listing-files-in-the-current-directory"><span class="header-section-number">12</span> Listing Files in the Current Directory</a></li>
+  <li><a href="#python-packages-for-data-science" id="toc-python-packages-for-data-science" class="nav-link" data-scroll-target="#python-packages-for-data-science"><span class="header-section-number">13</span> Python Packages for Data Science</a></li>
+  <li><a href="#a-quick-fun-test-emoji" id="toc-a-quick-fun-test-emoji" class="nav-link" data-scroll-target="#a-quick-fun-test-emoji"><span class="header-section-number">14</span> A quick, fun test: emoji</a></li>
   </ul>
 </nav>
     </div>
@@ -503,12 +502,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Python and Jupyter Notebook</h1>
+<p class="subtitle lead">(CSE331) Python for Data Science</p>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Md Rasel Biswas </p>
+          </div>
+  </div>
     
   
     
@@ -545,21 +551,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>One of the most popular languages for modern machine learning and AI applications in both academia and industry.</li>
 </ul>
 <hr>
-<section id="python-and-the-two-language-problem" class="level3">
-<h3 class="anchored" data-anchor-id="python-and-the-two-language-problem">Python and the “two-language problem”</h3>
+</section>
+<section id="python-and-the-two-language-problem" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="python-and-the-two-language-problem"><span class="header-section-number">3</span> Python and the “two-language problem”</h2>
 <ul>
 <li>Historically, teams prototype in a high-level language (e.g., R or SAS) and then re-implement in a systems language (e.g., C++/Java) for production.</li>
 <li>Python increasingly covers <strong>both</strong> roles: interactive research/prototyping and production services.</li>
 <li>When you need extra performance, Python can call into optimized code via <strong>Numba</strong>, <strong>Cython</strong>, or <strong>C/C++</strong> extensions-so you don’t have to switch languages.</li>
 </ul>
-<!--
-If you introduce environments later, you can add a slide about `conda` vs `pip`, and why isolating environments avoids dependency conflicts.
--->
 <hr>
 </section>
-</section>
-<section id="download-install-python" class="level2" data-transition="slide" data-number="3">
-<h2 data-transition="slide" data-number="3" class="anchored" data-anchor-id="download-install-python"><span class="header-section-number">3</span> Download &amp; Install Python</h2>
+<section id="download-install-python" class="level2" data-transition="slide" data-number="4">
+<h2 data-transition="slide" data-number="4" class="anchored" data-anchor-id="download-install-python"><span class="header-section-number">4</span> Download &amp; Install Python</h2>
 <ul>
 <li><p>Official Python downloads: <a href="https://www.python.org/downloads/" class="uri">https://www.python.org/downloads/</a></p></li>
 <li><p><strong>For data science, we recommend the Anaconda distribution</strong>, which includes most essential packages and tools:</p>
@@ -576,8 +579,8 @@ If you introduce environments later, you can add a slide about `conda` vs `pip`,
 </ul>
 <hr>
 </section>
-<section id="python-interface-python-repl" class="level2" data-number="4">
-<h2 data-number="4" class="anchored" data-anchor-id="python-interface-python-repl"><span class="header-section-number">4</span> Python Interface (Python REPL)</h2>
+<section id="python-interface-python-repl" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="python-interface-python-repl"><span class="header-section-number">5</span> Python Interface (Python REPL)</h2>
 <ul>
 <li>If you type <code>python</code> (or <code>python3</code>) in your terminal/command prompt, you’ll get an interactive prompt (<code>&gt;&gt;&gt;</code>) that can execute Python statements immediately.<br>
 This interactive interpreter is often called the <strong>Python REPL</strong> (also “Python console/shell”).</li>
@@ -599,8 +602,8 @@ This interactive interpreter is often called the <strong>Python REPL</strong> (a
 </ul>
 <hr>
 </section>
-<section id="scripts-vs.-notebooks" class="level2" data-number="5">
-<h2 data-number="5" class="anchored" data-anchor-id="scripts-vs.-notebooks"><span class="header-section-number">5</span> Scripts vs.&nbsp;Notebooks</h2>
+<section id="scripts-vs.-notebooks" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="scripts-vs.-notebooks"><span class="header-section-number">6</span> Scripts vs.&nbsp;Notebooks</h2>
 <ul>
 <li>A <strong>Python script</strong> is a plain-text file (typically <code>.py</code>) containing Python code.<br>
 Popular editors/IDEs for scripts include <strong>VS Code</strong>, <strong>PyCharm</strong>, <strong>Spyder</strong>, and <strong>Thonny</strong>.</li>
@@ -609,8 +612,8 @@ Popular editors/IDEs for scripts include <strong>VS Code</strong>, <strong>PyCha
 </ul>
 <hr>
 </section>
-<section id="launch-jupyterlab" class="level2" data-number="6">
-<h2 data-number="6" class="anchored" data-anchor-id="launch-jupyterlab"><span class="header-section-number">6</span> Launch JupyterLab</h2>
+<section id="launch-jupyterlab" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="launch-jupyterlab"><span class="header-section-number">7</span> Launch JupyterLab</h2>
 <ul>
 <li>From <strong>Anaconda Navigator</strong>: click <strong>JupyterLab</strong>.<br>
 </li>
@@ -624,8 +627,8 @@ Popular editors/IDEs for scripts include <strong>VS Code</strong>, <strong>PyCha
 <p><strong>In this course, we will use <em>JupyterLab</em> for an enhanced notebook experience.</strong></p>
 <hr>
 </section>
-<section id="working-with-jupyterlab" class="level2" data-number="7">
-<h2 data-number="7" class="anchored" data-anchor-id="working-with-jupyterlab"><span class="header-section-number">7</span> Working with JupyterLab</h2>
+<section id="working-with-jupyterlab" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="working-with-jupyterlab"><span class="header-section-number">8</span> Working with JupyterLab</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/jupyter-lab-interface.png" class="img-fluid figure-img" style="width:90.0%"></p>
@@ -641,8 +644,8 @@ Popular editors/IDEs for scripts include <strong>VS Code</strong>, <strong>PyCha
 </ul>
 <hr>
 </section>
-<section id="creating-and-opening-notebooks" class="level2" data-number="8">
-<h2 data-number="8" class="anchored" data-anchor-id="creating-and-opening-notebooks"><span class="header-section-number">8</span> Creating and Opening Notebooks</h2>
+<section id="creating-and-opening-notebooks" class="level2" data-number="9">
+<h2 data-number="9" class="anchored" data-anchor-id="creating-and-opening-notebooks"><span class="header-section-number">9</span> Creating and Opening Notebooks</h2>
 <ul>
 <li>To create a notebook, click the <strong>Notebook</strong> icon in the JupyterLab Launcher.<br>
 JupyterLab creates a new notebook (e.g., <code>Untitled.ipynb</code>) using the <strong>IPython</strong> kernel (Python).</li>
@@ -655,8 +658,8 @@ JupyterLab creates a new notebook (e.g., <code>Untitled.ipynb</code>) using the 
 </div>
 <hr>
 </section>
-<section id="notebook-building-blocks" class="level2" data-number="9">
-<h2 data-number="9" class="anchored" data-anchor-id="notebook-building-blocks"><span class="header-section-number">9</span> Notebook Building Blocks</h2>
+<section id="notebook-building-blocks" class="level2" data-number="10">
+<h2 data-number="10" class="anchored" data-anchor-id="notebook-building-blocks"><span class="header-section-number">10</span> Notebook Building Blocks</h2>
 <ul>
 <li>A Jupyter notebook <strong>consists</strong> of cells. The two main types are:
 <ol type="1">
@@ -674,28 +677,28 @@ JupyterLab creates a new notebook (e.g., <code>Untitled.ipynb</code>) using the 
 </ul>
 <hr>
 </section>
-<section id="working-directory-in-jupyter" class="level2" data-number="10">
-<h2 data-number="10" class="anchored" data-anchor-id="working-directory-in-jupyter"><span class="header-section-number">10</span> Working Directory in Jupyter</h2>
+<section id="working-directory-in-jupyter" class="level2" data-number="11">
+<h2 data-number="11" class="anchored" data-anchor-id="working-directory-in-jupyter"><span class="header-section-number">11</span> Working Directory in Jupyter</h2>
 <ul>
 <li>JupyterLab typically starts in the <strong>directory you launched it from</strong>.<br>
 New notebooks inherit the folder in which they are <strong>created/saved</strong>.</li>
 <li>Check the current working directory in Python:</li>
 </ul>
-<div id="c28e2e6d" class="cell" data-execution_count="1">
+<div id="0e741141" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>os.getcwd()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li>Change the working directory in Python:</li>
 </ul>
-<div id="3c4bbbf3" class="cell" data-execution_count="2">
+<div id="dbb0bc05" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>os.chdir(<span class="st">"path/to/directory"</span>)  <span class="co"># e.g., "C:/Users/you/projects" on Windows or "/Users/you/projects" on macOS/Linux</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li>IPython/Jupyter also provides <strong>magics</strong> (available in notebooks and IPython consoles):</li>
 </ul>
-<div id="99f0ad78" class="cell" data-execution_count="3">
+<div id="2ae4534f" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>pwd                 <span class="co"># show current working directory</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>cd <span class="op">/</span>path<span class="op">/</span>to<span class="op">/</span>folder  <span class="co"># change directory</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>ls                  <span class="co"># list files in current directory</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -703,25 +706,25 @@ New notebooks inherit the folder in which they are <strong>created/saved</strong
 <p><em>(Magics are <strong>not</strong> standard Python; they only work in IPython/Jupyter.)</em></p>
 <hr>
 </section>
-<section id="listing-files-in-the-current-directory" class="level2" data-number="11">
-<h2 data-number="11" class="anchored" data-anchor-id="listing-files-in-the-current-directory"><span class="header-section-number">11</span> Listing Files in the Current Directory</h2>
+<section id="listing-files-in-the-current-directory" class="level2" data-number="12">
+<h2 data-number="12" class="anchored" data-anchor-id="listing-files-in-the-current-directory"><span class="header-section-number">12</span> Listing Files in the Current Directory</h2>
 <ul>
 <li>Using Python:</li>
 </ul>
-<div id="58fce10b" class="cell" data-execution_count="4">
+<div id="f8cd2908" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>os.listdir()   <span class="co"># returns a list of file/folder names</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li>Using Jupyter magics (IPython):</li>
 </ul>
-<div id="60fc7f5b" class="cell" data-execution_count="5">
+<div id="d6f0051a" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>ls</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <hr>
 </section>
-<section id="python-packages-for-data-science" class="level2" data-number="12">
-<h2 data-number="12" class="anchored" data-anchor-id="python-packages-for-data-science"><span class="header-section-number">12</span> Python Packages for Data Science</h2>
+<section id="python-packages-for-data-science" class="level2" data-number="13">
+<h2 data-number="13" class="anchored" data-anchor-id="python-packages-for-data-science"><span class="header-section-number">13</span> Python Packages for Data Science</h2>
 <ul>
 <li>Core packages you’ll use frequently:
 <ul>
@@ -733,7 +736,7 @@ New notebooks inherit the folder in which they are <strong>created/saved</strong
 </ul></li>
 <li><strong>Installing packages</strong> inside a notebook (preferred magic):</li>
 </ul>
-<div id="af43c625" class="cell" data-execution_count="6">
+<div id="b10123af" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>pip install package<span class="op">-</span>name</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
@@ -749,39 +752,25 @@ New notebooks inherit the folder in which they are <strong>created/saved</strong
 <ul>
 <li><strong>Using packages</strong> after installation (each new session needs imports):</li>
 </ul>
-<div id="a52c43cf" class="cell" data-execution_count="7">
+<div id="8082d3c2" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <hr>
 </section>
-<section id="a-quick-fun-test-emoji" class="level2" data-number="13">
-<h2 data-number="13" class="anchored" data-anchor-id="a-quick-fun-test-emoji"><span class="header-section-number">13</span> A quick, fun test: emoji</h2>
+<section id="a-quick-fun-test-emoji" class="level2" data-number="14">
+<h2 data-number="14" class="anchored" data-anchor-id="a-quick-fun-test-emoji"><span class="header-section-number">14</span> A quick, fun test: emoji</h2>
 <p>Try installing the <code>emoji</code> package and using it:</p>
-<div id="6d5d52ad" class="cell" data-execution_count="8">
+<div id="0a020772" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>pip install emoji</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="4638db92" class="cell" data-execution_count="9">
+<div id="dc66abe1" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> emoji</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>emoji.emojize(<span class="st">"Python is :thumbs_up:"</span>, language<span class="op">=</span><span class="st">"alias"</span>)</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Alternative common name:</span></span>
 <span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>emoji.emojize(<span class="st">"Python is :thumbsup:"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<!--
----
-
-## Additional tips (optional, nice to know)
-
-* **Command names:** on some systems you may need `python3`, `pip3`, or `py -3` (Windows).
-* **Virtual environments:** prefer project-specific environments (via `conda create -n myenv python=3.12` or `python -m venv .venv`) to avoid dependency conflicts.
-* **Saving notebooks:** use version control (Git) where possible; notebooks include outputs, so consider clearing outputs before commits if your repo is large.
-
-```
-
-If you’d like, I can also tailor a variant that uses Miniconda + `mamba` and adds a short “environment management” slide set for your students.
-```
--->
 
 
 </section>

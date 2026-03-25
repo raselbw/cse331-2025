@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Md Rasel Biswas">
 
 <title>7 Packages – Python for Data Science</title>
 <style>
@@ -113,10 +114,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <meta property="og:title" content="7 Packages – Python for Data Science">
-<meta property="og:description" content="The course site for CSE331 at ISRT, University of Dhaka">
+<meta property="og:description" content="(CSE331) Python for Data Science">
 <meta property="og:site_name" content="Python for Data Science">
 <meta name="twitter:title" content="7 Packages – Python for Data Science">
-<meta name="twitter:description" content="The course site for CSE331 at ISRT, University of Dhaka">
+<meta name="twitter:description" content="(CSE331) Python for Data Science">
 <meta name="twitter:card" content="summary">
 </head>
 
@@ -473,12 +474,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#what-are-packages" id="toc-what-are-packages" class="nav-link active" data-scroll-target="#what-are-packages"><span class="header-section-number">1</span> What Are Packages?</a>
   <ul class="collapse">
-  <li><a href="#why-use-packages" id="toc-why-use-packages" class="nav-link" data-scroll-target="#why-use-packages">Why Use Packages?</a></li>
+  <li><a href="#why-use-packages" id="toc-why-use-packages" class="nav-link" data-scroll-target="#why-use-packages"><span class="header-section-number">1.1</span> Why Use Packages?</a></li>
   </ul></li>
   <li><a href="#installing-packages-for-the-first-time" id="toc-installing-packages-for-the-first-time" class="nav-link" data-scroll-target="#installing-packages-for-the-first-time"><span class="header-section-number">2</span> Installing Packages for the First Time</a>
   <ul class="collapse">
-  <li><a href="#installing-with-pip" id="toc-installing-with-pip" class="nav-link" data-scroll-target="#installing-with-pip">Installing with <code>pip</code></a></li>
-  <li><a href="#installing-with-conda-for-anaconda-users" id="toc-installing-with-conda-for-anaconda-users" class="nav-link" data-scroll-target="#installing-with-conda-for-anaconda-users">Installing with Conda (for Anaconda Users)</a></li>
+  <li><a href="#installing-with-pip" id="toc-installing-with-pip" class="nav-link" data-scroll-target="#installing-with-pip"><span class="header-section-number">2.1</span> Installing with <code>pip</code></a></li>
+  <li><a href="#installing-with-conda-for-anaconda-users" id="toc-installing-with-conda-for-anaconda-users" class="nav-link" data-scroll-target="#installing-with-conda-for-anaconda-users"><span class="header-section-number">2.2</span> Installing with Conda (for Anaconda Users)</a></li>
   </ul></li>
   <li><a href="#namespaces" id="toc-namespaces" class="nav-link" data-scroll-target="#namespaces"><span class="header-section-number">3</span> Namespaces</a></li>
   <li><a href="#the-math-package" id="toc-the-math-package" class="nav-link" data-scroll-target="#the-math-package"><span class="header-section-number">4</span> The <code>math</code> Package</a></li>
@@ -497,12 +498,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../py/01-start-py.html">Python Programming</a></li><li class="breadcrumb-item"><a href="../py/07-packages.html">7 Packages</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">7 Packages</h1>
+<p class="subtitle lead">(CSE331) Python for Data Science</p>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Md Rasel Biswas </p>
+          </div>
+  </div>
     
   
     
@@ -522,8 +530,8 @@ It’s similar to <strong>R packages</strong> such as <code>ggplot2</code> or <c
 <p>Example:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Once imported, you can use all the tools the package provides.</p>
-<section id="why-use-packages" class="level3">
-<h3 class="anchored" data-anchor-id="why-use-packages">Why Use Packages?</h3>
+<section id="why-use-packages" class="level3" data-number="1.1">
+<h3 data-number="1.1" class="anchored" data-anchor-id="why-use-packages"><span class="header-section-number">1.1</span> Why Use Packages?</h3>
 <ul>
 <li>To <strong>reuse</strong> existing, well-tested code</li>
 <li>To <strong>extend</strong> Python beyond its base features</li>
@@ -543,8 +551,8 @@ It’s similar to <strong>R packages</strong> such as <code>ggplot2</code> or <c
 <section id="installing-packages-for-the-first-time" class="level2" data-number="2">
 <h2 data-number="2" class="anchored" data-anchor-id="installing-packages-for-the-first-time"><span class="header-section-number">2</span> Installing Packages for the First Time</h2>
 <p>Some packages are not included with base Python, so we need to install them before importing.</p>
-<section id="installing-with-pip" class="level3">
-<h3 class="anchored" data-anchor-id="installing-with-pip">Installing with <code>pip</code></h3>
+<section id="installing-with-pip" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="installing-with-pip"><span class="header-section-number">2.1</span> Installing with <code>pip</code></h3>
 <p><code>pip</code> is Python’s built-in package manager. Run the following in your <strong>command prompt</strong> or <strong>terminal</strong> (not inside Python):</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install package_name</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Examples:</p>
@@ -565,8 +573,8 @@ It’s similar to <strong>R packages</strong> such as <code>ggplot2</code> or <c
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> show package_name</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 </section>
-<section id="installing-with-conda-for-anaconda-users" class="level3">
-<h3 class="anchored" data-anchor-id="installing-with-conda-for-anaconda-users">Installing with Conda (for Anaconda Users)</h3>
+<section id="installing-with-conda-for-anaconda-users" class="level3" data-number="2.2">
+<h3 data-number="2.2" class="anchored" data-anchor-id="installing-with-conda-for-anaconda-users"><span class="header-section-number">2.2</span> Installing with Conda (for Anaconda Users)</h3>
 <p>If you are using the <strong>Anaconda</strong> distribution, it comes with its own package manager: <code>conda</code>. You can install or update packages as follows:</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> install package_name</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Examples:</p>

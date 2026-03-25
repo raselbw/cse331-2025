@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Md Rasel Biswas">
 
 <title>11 Pandas DataFrame – Python for Data Science</title>
 <style>
@@ -116,10 +117,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <meta property="og:title" content="11 Pandas DataFrame – Python for Data Science">
-<meta property="og:description" content="The course site for CSE331 at ISRT, University of Dhaka">
+<meta property="og:description" content="(CSE331) Python for Data Science">
 <meta property="og:site_name" content="Python for Data Science">
 <meta name="twitter:title" content="11 Pandas DataFrame – Python for Data Science">
-<meta name="twitter:description" content="The course site for CSE331 at ISRT, University of Dhaka">
+<meta name="twitter:description" content="(CSE331) Python for Data Science">
 <meta name="twitter:card" content="summary">
 </head>
 
@@ -485,7 +486,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#pulling-columns" id="toc-pulling-columns" class="nav-link" data-scroll-target="#pulling-columns"><span class="header-section-number">9</span> Pulling Columns</a></li>
   <li><a href="#mutating-columns" id="toc-mutating-columns" class="nav-link" data-scroll-target="#mutating-columns"><span class="header-section-number">10</span> Mutating Columns</a>
   <ul class="collapse">
-  <li><a href="#recoding-with-np.select" id="toc-recoding-with-np.select" class="nav-link" data-scroll-target="#recoding-with-np.select">Recoding with <code>np.select()</code></a></li>
+  <li><a href="#recoding-with-np.select" id="toc-recoding-with-np.select" class="nav-link" data-scroll-target="#recoding-with-np.select"><span class="header-section-number">10.1</span> Recoding with <code>np.select()</code></a></li>
   </ul></li>
   <li><a href="#renaming-columns" id="toc-renaming-columns" class="nav-link" data-scroll-target="#renaming-columns"><span class="header-section-number">11</span> Renaming Columns</a></li>
   <li><a href="#grouping-and-aggregation" id="toc-grouping-and-aggregation" class="nav-link" data-scroll-target="#grouping-and-aggregation"><span class="header-section-number">12</span> Grouping and Aggregation</a></li>
@@ -505,12 +506,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../py/08-arrays-1d.html">Python for Data Science</a></li><li class="breadcrumb-item"><a href="../py/11-pandas.html">11 Pandas DataFrame</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">11 Pandas DataFrame</h1>
+<p class="subtitle lead">(CSE331) Python for Data Science</p>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Md Rasel Biswas </p>
+          </div>
+  </div>
     
   
     
@@ -527,14 +535,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>This lecture presents pandas operations using your well-known <strong>Palmer Penguins</strong> dataset.</p>
 <section id="introduction-to-dataframes" class="level2" data-number="1">
 <h2 data-number="1" class="anchored" data-anchor-id="introduction-to-dataframes"><span class="header-section-number">1</span> Introduction to DataFrames</h2>
-<div id="ff6be86b" class="cell" data-execution_count="1">
+<div id="f89bec94" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>A pandas <strong>DataFrame</strong> is like a <strong>tibble</strong> — it stores data in a table with rows and columns, allowing both numeric and text data.</p>
 <section id="creating-a-dataframe" class="level4">
 <h4 class="anchored" data-anchor-id="creating-a-dataframe">Creating a DataFrame</h4>
-<div id="8aa1e16e" class="cell" data-execution_count="2">
+<div id="e7af0750" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>employee_dict <span class="op">=</span> {</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'eid'</span>: [<span class="dv">214</span>, <span class="dv">174</span>, <span class="dv">126</span>, <span class="dv">227</span>, <span class="dv">151</span>, <span class="dv">175</span>, <span class="dv">193</span>, <span class="dv">146</span>],</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'name'</span>: [<span class="st">'Drew'</span>, <span class="st">'Faye'</span>, <span class="st">'Beth'</span>, <span class="st">'Chad'</span>, <span class="st">'Hana'</span>, <span class="st">'Gary'</span>, <span class="st">'Alex'</span>, <span class="st">'Emma'</span>],</span>
@@ -646,13 +654,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li><a href="data/penguins.csv">Download penguins data</a> and import it.</li>
 </ul>
-<div id="7999f369" class="cell" data-execution_count="3">
+<div id="ed9417e7" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>penguins <span class="op">=</span> pd.read_csv(<span class="st">"data/penguins.csv"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li>Quick look at the data:</li>
 </ul>
-<div id="38d7d1d6" class="cell" data-execution_count="4">
+<div id="ecf7abe8" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>penguins.info()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
@@ -672,7 +680,7 @@ dtypes: float64(4), int64(1), object(3)
 memory usage: 21.6+ KB</code></pre>
 </div>
 </div>
-<div id="457bc6ae" class="cell" data-execution_count="5">
+<div id="5b668cfb" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>penguins.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="5">
 <div>
@@ -757,7 +765,7 @@ memory usage: 21.6+ KB</code></pre>
 <ul>
 <li>Using <code>describe()</code> we can get a summary of numeric variables:</li>
 </ul>
-<div id="2e571803" class="cell" data-execution_count="6">
+<div id="18a808ed" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>penguins.describe()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="6">
 <div>
@@ -853,7 +861,7 @@ memory usage: 21.6+ KB</code></pre>
 </li>
 <li>Use <code>iloc[]</code> to access by integer position and <code>loc[]</code> to access by label.</li>
 </ul>
-<div id="612ee9c0" class="cell" data-execution_count="7">
+<div id="60e05248" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>penguins.iloc[<span class="dv">2</span>, <span class="dv">3</span>]        <span class="co"># 3rd row, 4th column (position-based)</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>penguins.iloc[<span class="dv">4</span>, <span class="dv">1</span>]        <span class="co"># 5th row, 2nd column (position-based)</span></span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>penguins.loc[<span class="dv">4</span>, <span class="st">'island'</span>]  <span class="co"># label-based</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -886,7 +894,7 @@ Note
 <ul>
 <li>In pandas, use column selection (<code>df[['col']]</code> or <code>.loc</code>) when you want to keep only certain columns from a DataFrame.</li>
 </ul>
-<div id="b1b99861" class="cell" data-execution_count="8">
+<div id="04823714" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># select single column (Series)</span></span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>species <span class="op">=</span> penguins[<span class="st">'species'</span>]</span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(species), species.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -900,7 +908,7 @@ Note
  Name: species, dtype: object)</code></pre>
 </div>
 </div>
-<div id="fe313e02" class="cell" data-execution_count="9">
+<div id="76321f95" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># select multiple columns (DataFrame)</span></span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>peng_sel <span class="op">=</span> penguins[[<span class="st">'species'</span>, <span class="st">'island'</span>, <span class="st">'sex'</span>, <span class="st">'bill_length_mm'</span>, <span class="st">'body_mass_g'</span>]]</span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>peng_sel.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -969,7 +977,7 @@ Note
 <ul>
 <li>You can also use <code>.loc</code> for column selection:</li>
 </ul>
-<div id="06ecb91b" class="cell" data-execution_count="10">
+<div id="543d9cb4" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>penguins.loc[:, [<span class="st">'species'</span>, <span class="st">'sex'</span>]].head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="10">
 <div>
@@ -1018,7 +1026,7 @@ Note
 <ul>
 <li>Select a <strong>range of columns</strong> (inclusive of both endpoints):</li>
 </ul>
-<div id="7f1a7351" class="cell" data-execution_count="11">
+<div id="44892f0e" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>penguins.loc[<span class="dv">1</span>:<span class="dv">3</span>, <span class="st">'bill_length_mm'</span>:<span class="st">'body_mass_g'</span>].head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="11">
 <div>
@@ -1068,7 +1076,7 @@ Note
 <ul>
 <li>In pandas, use row filtering (<code>df[condition]</code> or <code>.query()</code> ) when you want to keep only the rows that satisfy a condition.</li>
 </ul>
-<div id="c7c64cb0" class="cell" data-execution_count="12">
+<div id="98a27323" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># boolean mask</span></span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>adults <span class="op">=</span> penguins[penguins[<span class="st">'sex'</span>] <span class="op">==</span> <span class="st">'male'</span>]</span>
 <span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>adults.shape</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1076,7 +1084,7 @@ Note
 <pre><code>(168, 8)</code></pre>
 </div>
 </div>
-<div id="d397ce25" class="cell" data-execution_count="13">
+<div id="3f64412f" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># multiple conditions: males with body mass &gt; 4000 g</span></span>
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>sel <span class="op">=</span> (penguins[<span class="st">'sex'</span>] <span class="op">==</span> <span class="st">'male'</span>) <span class="op">&amp;</span> (penguins[<span class="st">'body_mass_g'</span>] <span class="op">&gt;</span> <span class="dv">3500</span>)</span>
 <span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>penguins.loc[sel, [<span class="st">'species'</span>, <span class="st">'sex'</span>, <span class="st">'body_mass_g'</span>]].head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1130,7 +1138,7 @@ Note
 </div>
 </div>
 </div>
-<div id="a20cfa99" class="cell" data-execution_count="14">
+<div id="f4911879" class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># using query() (tidy-like syntax)</span></span>
 <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>penguins.query(<span class="st">"sex == 'female' and body_mass_g &gt; 3500"</span>).head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="14">
@@ -1219,7 +1227,7 @@ Note
 <ul>
 <li>In pandas, use <code>sort_values()</code> when you want to sort the rows of a DataFrame by one or more columns.</li>
 </ul>
-<div id="0a61281c" class="cell" data-execution_count="15">
+<div id="dcd5fc0e" class="cell" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># sort by body_mass_g descending</span></span>
 <span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>penguins.sort_values(by<span class="op">=</span><span class="st">'body_mass_g'</span>, ascending<span class="op">=</span><span class="va">False</span>).head()</span>
 <span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1312,7 +1320,7 @@ Note
 <li><p>In pandas, use <code>iloc</code> row slicing when you want to select rows by their numeric positions (such as first n rows or a specific range).</p></li>
 <li><p>Equivalent of R’s <code>slice()</code> / <code>slice_head()</code> / <code>slice_sample()</code>:</p></li>
 </ul>
-<div id="9c45ee51" class="cell" data-execution_count="16">
+<div id="0dd38fc4" class="cell" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># first 6 rows (like slice_head(n=6))</span></span>
 <span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>penguins.iloc[:<span class="dv">6</span>]</span>
 <span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1407,7 +1415,7 @@ Note
 <ul>
 <li>In pandas, use <code>df['col']</code> or <code>df['col'].tolist()</code> when you want to extract a single column as a Series or a Python list.</li>
 </ul>
-<div id="3d178125" class="cell" data-execution_count="17">
+<div id="accda50f" class="cell" data-execution_count="17">
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>ages <span class="op">=</span> penguins[<span class="st">'body_mass_g'</span>]          <span class="co"># pandas Series</span></span>
 <span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>names_list <span class="op">=</span> penguins[<span class="st">'species'</span>].tolist()  <span class="co"># Python list</span></span>
 <span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(ages), <span class="bu">type</span>(names_list), names_list[:<span class="dv">6</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1423,7 +1431,7 @@ Note
 <ul>
 <li>In pandas, use <code>assign()</code> or direct column assignment when you want to create new variables or modify existing ones.</li>
 </ul>
-<div id="23ea7762" class="cell" data-execution_count="18">
+<div id="1a4b4a96" class="cell" data-execution_count="18">
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co"># create a new column: bill_ratio = bill_length_mm / bill_depth_mm</span></span>
 <span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>peng <span class="op">=</span> penguins.copy()</span>
 <span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>peng <span class="op">=</span> peng.assign(bill_ratio <span class="op">=</span> peng[<span class="st">'bill_length_mm'</span>] <span class="op">/</span> peng[<span class="st">'bill_depth_mm'</span>])</span>
@@ -1478,12 +1486,12 @@ Note
 </div>
 </div>
 </div>
-<section id="recoding-with-np.select" class="level3">
-<h3 class="anchored" data-anchor-id="recoding-with-np.select">Recoding with <code>np.select()</code></h3>
+<section id="recoding-with-np.select" class="level3" data-number="10.1">
+<h3 data-number="10.1" class="anchored" data-anchor-id="recoding-with-np.select"><span class="header-section-number">10.1</span> Recoding with <code>np.select()</code></h3>
 <ul>
 <li>Use <code>np.select()</code> or <code>pd.cut()</code> for binning. <code>np.select()</code> mimics <code>dplyr::case_when()</code>.</li>
 </ul>
-<div id="4b051385" class="cell" data-execution_count="19">
+<div id="5b162cf7" class="cell" data-execution_count="19">
 <div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>conds <span class="op">=</span> [</span>
 <span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>    peng[<span class="st">'body_mass_g'</span>].isna(),</span>
 <span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>    peng[<span class="st">'body_mass_g'</span>] <span class="op">&lt;</span> <span class="dv">3500</span>,</span>
@@ -1566,7 +1574,7 @@ Note
 <ul>
 <li>Alternative with <code>pd.cut()</code>:</li>
 </ul>
-<div id="e3205710" class="cell" data-execution_count="20">
+<div id="6cfed51a" class="cell" data-execution_count="20">
 <div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>bins <span class="op">=</span> [<span class="dv">0</span>, <span class="dv">3500</span>, <span class="dv">4500</span>, np.inf]</span>
 <span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>labels <span class="op">=</span> [<span class="st">'light'</span>, <span class="st">'medium'</span>, <span class="st">'heavy'</span>]</span>
 <span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>peng[<span class="st">'mass_bin'</span>] <span class="op">=</span> pd.cut(peng[<span class="st">'body_mass_g'</span>], bins<span class="op">=</span>bins, labels<span class="op">=</span>labels)</span>
@@ -1647,7 +1655,7 @@ Note
 <ul>
 <li>In pandas, use <code>rename(columns={...})</code> when you want to change column names.</li>
 </ul>
-<div id="c52d3d82" class="cell" data-execution_count="21">
+<div id="527b5f7c" class="cell" data-execution_count="21">
 <div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>peng <span class="op">=</span> peng.rename(columns<span class="op">=</span>{<span class="st">'bill_length_mm'</span>: <span class="st">'bill_length'</span>,</span>
 <span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>                            <span class="st">'bill_depth_mm'</span>: <span class="st">'bill_depth'</span>,</span>
 <span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>                            <span class="st">'body_mass_g'</span>: <span class="st">'mass_g'</span>})</span>
@@ -1665,7 +1673,7 @@ Note
 <li>In pandas, use <code>groupby().agg()</code> when you want to calculate summary statistics for groups of rows.</li>
 <li>Equivalent to <code>group_by()</code> + <code>summarise()</code> of tidyverse.</li>
 </ul>
-<div id="837e6a92" class="cell" data-execution_count="22">
+<div id="45dd633f" class="cell" data-execution_count="22">
 <div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co"># mean bill length and mass by species</span></span>
 <span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>peng.groupby(<span class="st">'species'</span>, as_index<span class="op">=</span><span class="va">False</span>).agg(</span>
 <span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>    mean_bill_length<span class="op">=</span>(<span class="st">'bill_length'</span>, <span class="st">'mean'</span>),</span>
@@ -1717,7 +1725,7 @@ Note
 <ul>
 <li>Multiple aggregations on same column:</li>
 </ul>
-<div id="a486cdc4" class="cell" data-execution_count="23">
+<div id="c75f648c" class="cell" data-execution_count="23">
 <div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>peng.groupby([<span class="st">'species'</span>, <span class="st">'island'</span>], as_index<span class="op">=</span><span class="va">False</span>).agg(</span>
 <span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>    n<span class="op">=</span>(<span class="st">'species'</span>, <span class="st">'count'</span>),</span>
 <span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>    mean_mass<span class="op">=</span>(<span class="st">'mass_g'</span>, <span class="st">'mean'</span>),</span>
@@ -1795,7 +1803,7 @@ Note
 <ul>
 <li>Use <code>.filter()</code>-like behavior to keep groups with enough observations:</li>
 </ul>
-<div id="aaf64816" class="cell" data-execution_count="24">
+<div id="086dd538" class="cell" data-execution_count="24">
 <div class="sourceCode cell-code" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>grouped <span class="op">=</span> peng.groupby(<span class="st">'species'</span>).<span class="bu">filter</span>(<span class="kw">lambda</span> df: df[<span class="st">'mass_g'</span>].notna().<span class="bu">sum</span>() <span class="op">&gt;=</span> <span class="dv">30</span>)</span>
 <span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>grouped[<span class="st">'species'</span>].unique()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="24">
@@ -1808,7 +1816,7 @@ Note
 <ul>
 <li>Row/column reductions:</li>
 </ul>
-<div id="10ea1409" class="cell" data-execution_count="25">
+<div id="24bd30ed" class="cell" data-execution_count="25">
 <div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="co"># column means (for numeric cols)</span></span>
 <span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>peng.select_dtypes(<span class="st">'number'</span>).mean()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="25">
@@ -1821,7 +1829,7 @@ bill_ratio              2.605649
 dtype: float64</code></pre>
 </div>
 </div>
-<div id="196d592d" class="cell" data-execution_count="26">
+<div id="cd2e1b02" class="cell" data-execution_count="26">
 <div class="sourceCode cell-code" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="co"># sum across row (example creating a fake matrix)</span></span>
 <span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>M <span class="op">=</span> np.arange(<span class="dv">12</span>).reshape(<span class="dv">3</span>,<span class="dv">4</span>)</span>
 <span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a>M</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1831,7 +1839,7 @@ dtype: float64</code></pre>
        [ 8,  9, 10, 11]])</code></pre>
 </div>
 </div>
-<div id="84d8a033" class="cell" data-execution_count="27">
+<div id="e9e791ca" class="cell" data-execution_count="27">
 <div class="sourceCode cell-code" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>pd.DataFrame(M).<span class="bu">sum</span>(axis<span class="op">=</span><span class="dv">0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="27">
 <pre><code>0    12
@@ -1841,7 +1849,7 @@ dtype: float64</code></pre>
 dtype: int64</code></pre>
 </div>
 </div>
-<div id="47e4b7bb" class="cell" data-execution_count="28">
+<div id="0bd2e85e" class="cell" data-execution_count="28">
 <div class="sourceCode cell-code" id="cb44"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>pd.DataFrame(M).<span class="bu">sum</span>(axis<span class="op">=</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="28">
 <pre><code>0     6
@@ -1856,7 +1864,7 @@ dtype: int64</code></pre>
 <ul>
 <li>Chaining with method chaining:</li>
 </ul>
-<div id="88ffa500" class="cell" data-execution_count="29">
+<div id="08b6cbe8" class="cell" data-execution_count="29">
 <div class="sourceCode cell-code" id="cb46"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>summary <span class="op">=</span> (</span>
 <span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a>    peng</span>
 <span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a>    .dropna(subset<span class="op">=</span>[<span class="st">'mass_g'</span>,<span class="st">'bill_length'</span>])</span>
@@ -1909,7 +1917,7 @@ dtype: int64</code></pre>
 <ul>
 <li>In pandas, use <code>value_counts()</code> when you want to count how many times each category or value appears.</li>
 </ul>
-<div id="e06329c6" class="cell" data-execution_count="30">
+<div id="0e176429" class="cell" data-execution_count="30">
 <div class="sourceCode cell-code" id="cb47"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>penguins.value_counts(<span class="st">'species'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="30">
 <pre><code>species
@@ -1922,7 +1930,7 @@ Name: count, dtype: int64</code></pre>
 <ul>
 <li>For multiple columns, pass a list. You can also turn it into a DataFrame and reset the index for tidy output:</li>
 </ul>
-<div id="769b1113" class="cell" data-execution_count="31">
+<div id="b2caa1af" class="cell" data-execution_count="31">
 <div class="sourceCode cell-code" id="cb49"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a>penguins.value_counts([<span class="st">'species'</span>, <span class="st">'sex'</span>]).reset_index()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="31">
 <div>
@@ -1991,7 +1999,7 @@ Name: count, dtype: int64</code></pre>
 </ul>
 <section id="row-binding-stacking-rows" class="level4">
 <h4 class="anchored" data-anchor-id="row-binding-stacking-rows">Row-binding (stacking rows)</h4>
-<div id="5fca9773" class="cell" data-execution_count="32">
+<div id="ab3453f7" class="cell" data-execution_count="32">
 <div class="sourceCode cell-code" id="cb50"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Example using penguins data</span></span>
 <span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> penguins.iloc[<span class="dv">0</span>:<span class="dv">2</span>]</span>
 <span id="cb50-3"><a href="#cb50-3" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> penguins.iloc[<span class="dv">2</span>:<span class="dv">4</span>]</span>
@@ -2069,7 +2077,7 @@ Name: count, dtype: int64</code></pre>
 </section>
 <section id="column-binding-stacking-columns" class="level4">
 <h4 class="anchored" data-anchor-id="column-binding-stacking-columns">Column-binding (stacking columns)</h4>
-<div id="b288acca" class="cell" data-execution_count="33">
+<div id="d83599c9" class="cell" data-execution_count="33">
 <div class="sourceCode cell-code" id="cb51"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> penguins[[<span class="st">'bill_length_mm'</span>]]</span>
 <span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> penguins[[<span class="st">'bill_depth_mm'</span>]]</span>
 <span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a></span>
