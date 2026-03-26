@@ -587,7 +587,7 @@
     "href": "py/09-arrays-2d.html#shape-reshape-and--1-inference",
     "title": "9 NumPy 2D-Arrays",
     "section": "2 Shape, reshape() and -1 inference",
-    "text": "2 Shape, reshape() and -1 inference\n\nEvery array has a .shape attribute:\n\n\nprint(array1.shape)   # (3, 4)\n\n(3, 4)\n\n\n\nA 1D array shape shows one value:\n\n\narray_1d = np.array([5, 7, 1, 8, 4])\nprint(array_1d.shape)   # (5,)\n\n(5,)\n\n\n\nreshape() reinterprets the same data with new dimensions (total elements must match). Order is row-major by default:\n\n\narray2 = array1.reshape(2, 6)\nprint('Shape =', array2.shape)\nprint(array2)\n\nShape = (2, 6)\n[[ 1  2  3  4  5  6]\n [ 7  8  9 10 11 12]]\n\n\n\nReshape doesn’t change the data, only how it’s viewed.\nUse -1 to let NumPy infer the dimension:\n\n\narray3 = array1.reshape(4, -1)   # -1 inferred as 3\nprint('Shape =', array3.shape)\nprint(array3)\n\nShape = (4, 3)\n[[ 1  2  3]\n [ 4  5  6]\n [ 7  8  9]\n [10 11 12]]\n\n\n\nReshaping a 1D array into a single row or single column:\n\n\narray_1d = np.array([3, 1, 4])\nrow_array = array_1d.reshape(1, 3)   # shape (1,3)\ncol_array = array_1d.reshape(3, 1)   # shape (3,1)\n\n\nCreating random and constant arrays\n\nMany constructors accept a shape parameter:\n\n\nones_3x5 = np.ones(shape=(3,5))\nprint(ones_3x5)\n\n[[1. 1. 1. 1. 1.]\n [1. 1. 1. 1. 1.]\n [1. 1. 1. 1. 1.]]\n\n\n\nrand_array = np.random.uniform(low=0, high=1, size=(2,5))\nrand_array = np.round(rand_array, 2)\nprint(rand_array)\n\n[[0.25 0.72 0.91 0.83 0.88]\n [0.49 0.97 0.01 0.72 0.67]]",
+    "text": "2 Shape, reshape() and -1 inference\n\nEvery array has a .shape attribute:\n\n\nprint(array1.shape)   # (3, 4)\n\n(3, 4)\n\n\n\nA 1D array shape shows one value:\n\n\narray_1d = np.array([5, 7, 1, 8, 4])\nprint(array_1d.shape)   # (5,)\n\n(5,)\n\n\n\nreshape() reinterprets the same data with new dimensions (total elements must match). Order is row-major by default:\n\n\narray2 = array1.reshape(2, 6)\nprint('Shape =', array2.shape)\nprint(array2)\n\nShape = (2, 6)\n[[ 1  2  3  4  5  6]\n [ 7  8  9 10 11 12]]\n\n\n\nReshape doesn’t change the data, only how it’s viewed.\nUse -1 to let NumPy infer the dimension:\n\n\narray3 = array1.reshape(4, -1)   # -1 inferred as 3\nprint('Shape =', array3.shape)\nprint(array3)\n\nShape = (4, 3)\n[[ 1  2  3]\n [ 4  5  6]\n [ 7  8  9]\n [10 11 12]]\n\n\n\nReshaping a 1D array into a single row or single column:\n\n\narray_1d = np.array([3, 1, 4])\nrow_array = array_1d.reshape(1, 3)   # shape (1,3)\ncol_array = array_1d.reshape(3, 1)   # shape (3,1)\n\n\nCreating random and constant arrays\n\nMany constructors accept a shape parameter:\n\n\nones_3x5 = np.ones(shape=(3,5))\nprint(ones_3x5)\n\n[[1. 1. 1. 1. 1.]\n [1. 1. 1. 1. 1.]\n [1. 1. 1. 1. 1.]]\n\n\n\nrand_array = np.random.uniform(low=0, high=1, size=(2,5))\nrand_array = np.round(rand_array, 2)\nprint(rand_array)\n\n[[0.19 0.2  0.19 0.94 0.14]\n [0.21 0.86 0.58 0.96 0.07]]",
     "crumbs": [
       "Python for Data Science",
       "9 NumPy 2D-Arrays"
@@ -1060,7 +1060,67 @@
     "href": "py/00-course-overview.html",
     "title": "Course overview",
     "section": "",
-    "text": "Course Teacher\n\n\n\n\n\n\n\n\n\n\nMd Rasel Biswas\nMS & BS in Applied Statistics (DU)\nFaculty member at DU since July 2022\nEmail: rasel@du.ac.bd\nPersonal Website: https://rasel.rbind.io\n\n\n\n\nCourse introduction\nCourse Title: Python for Data Science (Lab)\nCourse Code: CSE331\nCredit Hour: 2\n\nPython has become one of the most popular programming languages for data science due to its simplicity, versatility, and robust data analysis and machine learning capabilities. As organizations continue to digitize and generate increasingly large amounts of data, open-source tools like Python can enable data manipulation and exploration, machine learning, and statistical analysis in a scalable manner. This course provides a gentle introduction to programming in Python and its applications in data science and analytics.\n\n\n\nCourse objectives\nUpon completing this course, students will have developed a foundational understanding of the Python programming language. Specifically, students will be able to:\n\nUnderstand the fundamentals of Python programming, including basic syntax, data types, control structures, and functions.\nPerform data analysis using numpy and pandas, including data manipulation and exploratory data analysis.\nCreate effective data visualizations using matplotlib and seaborn.\nProduce dynamic statistical reports using interpreting and documenting visualizations and analyses of real-world problems.\n\n\n\nTextbooks\n\nPython for Data Analysis, 3E\n\n\n\nLecture time\nEvery Wednesday 1:45 PM – 3:05 PM at ISRT Computer Lab 1 (Room 403)\n\n\nAssessment\n\nAttendance: 5%\nAssignments: 5%\nIncourse exams: 30%\nFinal exam: 60%",
+    "text": "Md Rasel Biswas\nMS & BS in Applied Statistics (DU)\nFaculty member at DU since July 2022\nEmail: rasel@du.ac.bd\nPersonal Website: https://rasel.rbind.io",
+    "crumbs": [
+      "Course Overview"
+    ]
+  },
+  {
+    "objectID": "py/00-course-overview.html#course-teacher",
+    "href": "py/00-course-overview.html#course-teacher",
+    "title": "Course overview",
+    "section": "",
+    "text": "Md Rasel Biswas\nMS & BS in Applied Statistics (DU)\nFaculty member at DU since July 2022\nEmail: rasel@du.ac.bd\nPersonal Website: https://rasel.rbind.io",
+    "crumbs": [
+      "Course Overview"
+    ]
+  },
+  {
+    "objectID": "py/00-course-overview.html#course-introduction",
+    "href": "py/00-course-overview.html#course-introduction",
+    "title": "Course overview",
+    "section": "2 Course introduction",
+    "text": "2 Course introduction\nCourse Title: Python for Data Science (Lab)\nCourse Code: CSE331\nCredit Hour: 2\n\nPython has become one of the most popular programming languages for data science due to its simplicity, versatility, and robust data analysis and machine learning capabilities. As organizations continue to digitize and generate increasingly large amounts of data, open-source tools like Python can enable data manipulation and exploration, machine learning, and statistical analysis in a scalable manner. This course provides a gentle introduction to programming in Python and its applications in data science and analytics.",
+    "crumbs": [
+      "Course Overview"
+    ]
+  },
+  {
+    "objectID": "py/00-course-overview.html#course-objectives",
+    "href": "py/00-course-overview.html#course-objectives",
+    "title": "Course overview",
+    "section": "3 Course objectives",
+    "text": "3 Course objectives\nUpon completing this course, students will have developed a foundational understanding of the Python programming language. Specifically, students will be able to:\n\nUnderstand the fundamentals of Python programming, including basic syntax, data types, control structures, and functions.\nPerform data analysis using numpy and pandas, including data manipulation and exploratory data analysis.\nCreate effective data visualizations using matplotlib and seaborn.\nProduce dynamic statistical reports using interpreting and documenting visualizations and analyses of real-world problems.",
+    "crumbs": [
+      "Course Overview"
+    ]
+  },
+  {
+    "objectID": "py/00-course-overview.html#textbooks",
+    "href": "py/00-course-overview.html#textbooks",
+    "title": "Course overview",
+    "section": "4 Textbooks",
+    "text": "4 Textbooks\n\nPython for Data Analysis, 3E",
+    "crumbs": [
+      "Course Overview"
+    ]
+  },
+  {
+    "objectID": "py/00-course-overview.html#lecture-time",
+    "href": "py/00-course-overview.html#lecture-time",
+    "title": "Course overview",
+    "section": "5 Lecture time",
+    "text": "5 Lecture time\nEvery Wednesday 1:45 PM – 3:05 PM at ISRT Computer Lab 1 (Room 403)",
+    "crumbs": [
+      "Course Overview"
+    ]
+  },
+  {
+    "objectID": "py/00-course-overview.html#assessment",
+    "href": "py/00-course-overview.html#assessment",
+    "title": "Course overview",
+    "section": "6 Assessment",
+    "text": "6 Assessment\n\nAttendance: 5%\nAssignments: 5%\nIncourse exams: 30%\nFinal exam: 60%",
     "crumbs": [
       "Course Overview"
     ]
@@ -1077,7 +1137,27 @@
     "href": "index.html",
     "title": "Python for Data Science",
     "section": "",
-    "text": "Introduction\n\n\n\n\n\n\n\n\nThis website contains lectures, assignments, and other resources for Python for Data Science (CSE331), ISRT, University of Dhaka, 2024–25 session.\n\n  ✔ Course Completed | Start: Aug 20, 2025 | End: Mar 08, 2026\n\n\n\n\n\nLecture Materials\n\nCourse Overview\nPython and Jupyter Notebook\n\n\nModule 1: Python Programming\n\n1 Intro & Basic Data Types\n2 Collections\n3 Control Flow\n4 Functions\n5 Classes\n6 Comprehensions\n7 Packages\n\n\n\nModule 2: Python for Data Science\n\n8 NumPy 1D-Arrays\n9 NumPy 2D-Arrays\n10 NumPy Random Number\n11 Pandas DataFrame\n12 Handle Missing Data\n13 Reshape\n14 Join/Merge\n15 Matplotlib\n16 Seaborn\n\n\n\nAssignments\n\nAssignment 1",
+    "text": "This website contains lectures, assignments, and other resources for Python for Data Science (CSE331), ISRT, University of Dhaka, 2024–25 session.\n\n  ✔ Course Completed | Start: Aug 20, 2025 | End: Mar 08, 2026",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#introduction",
+    "href": "index.html#introduction",
+    "title": "Python for Data Science",
+    "section": "",
+    "text": "This website contains lectures, assignments, and other resources for Python for Data Science (CSE331), ISRT, University of Dhaka, 2024–25 session.\n\n  ✔ Course Completed | Start: Aug 20, 2025 | End: Mar 08, 2026",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#lecture-materials",
+    "href": "index.html#lecture-materials",
+    "title": "Python for Data Science",
+    "section": "2 Lecture Materials",
+    "text": "2 Lecture Materials\n\nCourse Overview\nPython and Jupyter Notebook\n\n\nModule 1: Python Programming\n\n1 Intro & Basic Data Types\n2 Collections\n3 Control Flow\n4 Functions\n5 Classes\n6 Comprehensions\n7 Packages\n\n\n\nModule 2: Python for Data Science\n\n8 NumPy 1D-Arrays\n9 NumPy 2D-Arrays\n10 NumPy Random Number\n11 Pandas DataFrame\n12 Handle Missing Data\n13 Reshape\n14 Join/Merge\n15 Matplotlib\n16 Seaborn\n\n\n\nAssignments\n\nAssignment 1",
     "crumbs": [
       "Home"
     ]

@@ -110,6 +110,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-KKHDF20HG0"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-KKHDF20HG0', { 'anonymize_ip': true});
+</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
 
@@ -496,16 +505,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 
 
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Author</div>
+  <div class="quarto-title-meta-heading">Affiliation</div>
+  
+    <div class="quarto-title-meta-contents">
+    <p class="author">Md Rasel Biswas </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            ISRT, University of Dhaka
+          </p>
+      </div>
+  </div>
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Md Rasel Biswas </p>
-          </div>
-  </div>
-    
+      
   
     
   </div>
@@ -562,7 +578,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="creating-missing-values" class="level2" data-number="2">
 <h2 data-number="2" class="anchored" data-anchor-id="creating-missing-values"><span class="header-section-number">2</span> Creating Missing Values</h2>
-<div id="aff425f7" class="cell" data-execution_count="1">
+<div id="866b16b4" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -622,7 +638,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li>Equivalent of <code>is.na(df)</code> in tidyverse:</li>
 </ul>
-<div id="4286086a" class="cell" data-execution_count="2">
+<div id="69907901" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>df.isna()</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>df.isnull()   <span class="co"># same thing</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="2">
@@ -672,7 +688,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li>Count missing:</li>
 </ul>
-<div id="755eb03f" class="cell" data-execution_count="3">
+<div id="4618951d" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>df.isna().<span class="bu">sum</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="3">
 <pre><code>x    1
@@ -684,7 +700,7 @@ dtype: int64</code></pre>
 <ul>
 <li>Count non-missing:</li>
 </ul>
-<div id="8d55a7e3" class="cell" data-execution_count="4">
+<div id="98835179" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>df.notna().<span class="bu">sum</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="4">
 <pre><code>x    3
@@ -699,7 +715,7 @@ dtype: int64</code></pre>
 <ul>
 <li>To drop any row that has at least one missing value:</li>
 </ul>
-<div id="0defa248" class="cell" data-execution_count="5">
+<div id="c253ed0a" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>df.dropna()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="5">
 <div>
@@ -736,7 +752,7 @@ dtype: int64</code></pre>
 <ul>
 <li>Drop rows only if all values are missing:</li>
 </ul>
-<div id="2d0ad374" class="cell" data-execution_count="6">
+<div id="89b4ed18" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>df.dropna(how<span class="op">=</span><span class="st">"all"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="6">
 <div>
@@ -785,7 +801,7 @@ dtype: int64</code></pre>
 <ul>
 <li>Drop missing based on specific columns (like R’s <code>drop_na(cols=c("x","y"))</code>):</li>
 </ul>
-<div id="8eae03ca" class="cell" data-execution_count="7">
+<div id="a2fe6591" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>df.dropna(subset<span class="op">=</span>[<span class="st">"x"</span>, <span class="st">"y"</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="7">
 <div>
@@ -825,7 +841,7 @@ dtype: int64</code></pre>
 <ul>
 <li>Replace with a single value:</li>
 </ul>
-<div id="0a61bf04" class="cell" data-execution_count="8">
+<div id="0ffe5147" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>df.fillna(<span class="dv">0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="8">
 <div>
@@ -874,7 +890,7 @@ dtype: int64</code></pre>
 <ul>
 <li>Replace column-wise using a dictionary:</li>
 </ul>
-<div id="cd2622da" class="cell" data-execution_count="9">
+<div id="9d9f9b34" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>df.fillna({<span class="st">"x"</span>: <span class="dv">0</span>, <span class="st">"y"</span>: <span class="st">"missing"</span>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="9">
 <div>
@@ -923,7 +939,7 @@ dtype: int64</code></pre>
 <ul>
 <li>Replace using summary statistics:</li>
 </ul>
-<div id="02d99c4e" class="cell" data-execution_count="10">
+<div id="d1b13911" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>df[<span class="st">"x"</span>].fillna(df[<span class="st">"x"</span>].mean())</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>df[<span class="st">"x"</span>].fillna(df[<span class="st">"x"</span>].median())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="10">
@@ -940,7 +956,7 @@ Name: x, dtype: float64</code></pre>
 <ul>
 <li>Mean ignoring missing (default behavior):</li>
 </ul>
-<div id="009dc7d4" class="cell" data-execution_count="13">
+<div id="1d4f9168" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>df[<span class="st">"x"</span>].mean()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="13">
 <pre><code>np.float64(2.3333333333333335)</code></pre>
@@ -949,7 +965,7 @@ Name: x, dtype: float64</code></pre>
 <ul>
 <li>Mean keeping missing:</li>
 </ul>
-<div id="c88f3582" class="cell" data-execution_count="14">
+<div id="a6637c9c" class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>df[<span class="st">"x"</span>].mean(skipna<span class="op">=</span><span class="va">False</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="14">
 <pre><code>np.float64(nan)</code></pre>
@@ -958,7 +974,7 @@ Name: x, dtype: float64</code></pre>
 <ul>
 <li>Count missing per column:</li>
 </ul>
-<div id="dcc96483" class="cell" data-execution_count="15">
+<div id="40392fac" class="cell" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>df.isna().<span class="bu">sum</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="15">
 <pre><code>x    1
@@ -970,7 +986,7 @@ dtype: int64</code></pre>
 <ul>
 <li>Count missing per row:</li>
 </ul>
-<div id="85ae90c8" class="cell" data-execution_count="16">
+<div id="7a6083e4" class="cell" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>df.isna().<span class="bu">sum</span>(axis<span class="op">=</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="16">
 <pre><code>0    0
@@ -983,7 +999,7 @@ dtype: int64</code></pre>
 <ul>
 <li>Percentage missing:</li>
 </ul>
-<div id="90cd2c0c" class="cell" data-execution_count="17">
+<div id="f9875aef" class="cell" data-execution_count="17">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>df.isna().mean() <span class="op">*</span> <span class="dv">100</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="17">
 <pre><code>x    25.0
@@ -995,7 +1011,7 @@ dtype: float64</code></pre>
 </section>
 <section id="example" class="level2" data-number="7">
 <h2 data-number="7" class="anchored" data-anchor-id="example"><span class="header-section-number">7</span> Example</h2>
-<div id="32fb301f" class="cell" data-execution_count="18">
+<div id="c8a28d29" class="cell" data-execution_count="18">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame({</span>
 <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"id"</span>: [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>],</span>
 <span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"age"</span>: [<span class="dv">23</span>, <span class="va">None</span>, <span class="dv">30</span>, <span class="va">None</span>],</span>
@@ -1046,7 +1062,7 @@ dtype: float64</code></pre>
 </div>
 </div>
 </div>
-<div id="47050ddd" class="cell" data-execution_count="19">
+<div id="3bcbc890" class="cell" data-execution_count="19">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>clean <span class="op">=</span> (</span>
 <span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>    df</span>
 <span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>      .assign(age <span class="op">=</span> <span class="kw">lambda</span> x: x.age.fillna(x.age.median()))</span>

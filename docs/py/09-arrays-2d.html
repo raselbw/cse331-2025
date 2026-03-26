@@ -110,6 +110,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-KKHDF20HG0"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-KKHDF20HG0', { 'anonymize_ip': true});
+</script>
 <style>html{ scroll-behavior: smooth; }</style>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
@@ -522,16 +531,23 @@ window.Quarto = {
 </div>
 
 
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Author</div>
+  <div class="quarto-title-meta-heading">Affiliation</div>
+  
+    <div class="quarto-title-meta-contents">
+    <p class="author">Md Rasel Biswas </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            ISRT, University of Dhaka
+          </p>
+      </div>
+  </div>
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Md Rasel Biswas </p>
-          </div>
-  </div>
-    
+      
   
     
   </div>
@@ -545,7 +561,7 @@ window.Quarto = {
 <ul>
 <li>Create a 2D array from a list of equal-length lists (all elements must share a dtype):</li>
 </ul>
-<div id="bd5fbc6d" class="cell" data-execution_count="2">
+<div id="9b1cfb8a" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>list_of_lists <span class="op">=</span> [[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>],</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>                 [<span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>],</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>                 [<span class="dv">9</span>, <span class="dv">10</span>, <span class="dv">11</span>, <span class="dv">12</span>]]</span>
@@ -562,7 +578,7 @@ window.Quarto = {
 <ul>
 <li>Indexing uses two indices separated by a comma: <code>array[row_index, col_index]</code>. NumPy uses <strong>0-based indexing</strong>.</li>
 </ul>
-<div id="1b99adac" class="cell" data-execution_count="3">
+<div id="509acb4e" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(array1[<span class="dv">1</span>, <span class="dv">2</span>])   <span class="co"># second row, third column -&gt; 7</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(array1[<span class="dv">2</span>, <span class="op">-</span><span class="dv">1</span>])  <span class="co"># last element of third row -&gt; 12</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -573,7 +589,7 @@ window.Quarto = {
 <ul>
 <li>Slicing returns subarrays. First axis (rows) comes before the comma; second axis (columns) after:</li>
 </ul>
-<div id="9653ab41" class="cell" data-execution_count="4">
+<div id="9fd42e8e" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(array1[:<span class="dv">2</span>, :<span class="dv">3</span>])   <span class="co"># first 2 rows and first 3 columns</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[[1 2 3]
@@ -583,7 +599,7 @@ window.Quarto = {
 <ul>
 <li>Select all rows or columns with a lone colon:</li>
 </ul>
-<div id="c0521fa8" class="cell" data-execution_count="5">
+<div id="8c7f8a2c" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(array1[<span class="dv">1</span>:, :])    <span class="co"># rows from index 1 to end, all columns</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(array1[<span class="dv">1</span>, :])     <span class="co"># entire second row -&gt; returns 1D array</span></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(array1[:, <span class="dv">3</span>])     <span class="co"># entire fourth column -&gt; returns 1D array</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -613,7 +629,7 @@ Note
 <ul>
 <li>Every array has a <code>.shape</code> attribute:</li>
 </ul>
-<div id="6b3baf2b" class="cell" data-execution_count="6">
+<div id="26d4e688" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(array1.shape)   <span class="co"># (3, 4)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>(3, 4)</code></pre>
@@ -622,7 +638,7 @@ Note
 <ul>
 <li>A 1D array shape shows one value:</li>
 </ul>
-<div id="5785138e" class="cell" data-execution_count="7">
+<div id="c9a90cd2" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>array_1d <span class="op">=</span> np.array([<span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">1</span>, <span class="dv">8</span>, <span class="dv">4</span>])</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(array_1d.shape)   <span class="co"># (5,)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -632,7 +648,7 @@ Note
 <ul>
 <li><code>reshape()</code> reinterprets the same data with new dimensions (total elements must match). Order is row-major by default:</li>
 </ul>
-<div id="45605018" class="cell" data-execution_count="8">
+<div id="07864eb6" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>array2 <span class="op">=</span> array1.reshape(<span class="dv">2</span>, <span class="dv">6</span>)</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Shape ='</span>, array2.shape)</span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(array2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -646,7 +662,7 @@ Note
 <li>Reshape doesn’t change the data, only how it’s viewed.</li>
 <li>Use <code>-1</code> to let NumPy infer the dimension:</li>
 </ul>
-<div id="541b9611" class="cell" data-execution_count="9">
+<div id="1975618f" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>array3 <span class="op">=</span> array1.reshape(<span class="dv">4</span>, <span class="op">-</span><span class="dv">1</span>)   <span class="co"># -1 inferred as 3</span></span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Shape ='</span>, array3.shape)</span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(array3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -661,7 +677,7 @@ Note
 <ul>
 <li>Reshaping a 1D array into a single row or single column:</li>
 </ul>
-<div id="1be7e3f2" class="cell" data-execution_count="10">
+<div id="82653ee3" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>array_1d <span class="op">=</span> np.array([<span class="dv">3</span>, <span class="dv">1</span>, <span class="dv">4</span>])</span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>row_array <span class="op">=</span> array_1d.reshape(<span class="dv">1</span>, <span class="dv">3</span>)   <span class="co"># shape (1,3)</span></span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>col_array <span class="op">=</span> array_1d.reshape(<span class="dv">3</span>, <span class="dv">1</span>)   <span class="co"># shape (3,1)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -671,7 +687,7 @@ Note
 <ul>
 <li>Many constructors accept a <code>shape</code> parameter:</li>
 </ul>
-<div id="ae48baa6" class="cell" data-execution_count="11">
+<div id="34dbcaad" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>ones_3x5 <span class="op">=</span> np.ones(shape<span class="op">=</span>(<span class="dv">3</span>,<span class="dv">5</span>))</span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(ones_3x5)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -680,13 +696,13 @@ Note
  [1. 1. 1. 1. 1.]]</code></pre>
 </div>
 </div>
-<div id="126b18e3" class="cell" data-execution_count="12">
+<div id="126a82a6" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>rand_array <span class="op">=</span> np.random.uniform(low<span class="op">=</span><span class="dv">0</span>, high<span class="op">=</span><span class="dv">1</span>, size<span class="op">=</span>(<span class="dv">2</span>,<span class="dv">5</span>))</span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>rand_array <span class="op">=</span> np.<span class="bu">round</span>(rand_array, <span class="dv">2</span>)</span>
 <span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(rand_array)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[[0.25 0.72 0.91 0.83 0.88]
- [0.49 0.97 0.01 0.72 0.67]]</code></pre>
+<pre><code>[[0.19 0.2  0.19 0.94 0.14]
+ [0.21 0.86 0.58 0.96 0.07]]</code></pre>
 </div>
 </div>
 </section>
@@ -696,7 +712,7 @@ Note
 <ul>
 <li>Elementwise arithmetic works when arrays have the same shape:</li>
 </ul>
-<div id="f2d876b7" class="cell" data-execution_count="13">
+<div id="c3d77443" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>x1 <span class="op">=</span> np.array([[<span class="dv">7</span>, <span class="dv">0</span>, <span class="dv">8</span>],</span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>               [<span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">2</span>]])</span>
 <span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>x2 <span class="op">=</span> np.array([[<span class="dv">2</span>, <span class="dv">5</span>, <span class="dv">3</span>],</span>
@@ -724,7 +740,7 @@ x1 ** x2 =
 <li>Broadcasting is a mechanism that allows arithmetic operations between arrays of different shapes or dimensions.</li>
 </ul>
 <p>Example: adding a column or row vector to a matrix.</p>
-<div id="d7e01123" class="cell" data-execution_count="14">
+<div id="8c44414b" class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>y1 <span class="op">=</span> np.array([[<span class="dv">3</span>, <span class="dv">1</span>, <span class="dv">0</span>],</span>
 <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>               [<span class="dv">5</span>, <span class="dv">2</span>, <span class="dv">7</span>]])          <span class="co"># shape (2,3)</span></span>
 <span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>y2 <span class="op">=</span> np.array([[<span class="dv">10</span>], [<span class="dv">20</span>]])         <span class="co"># shape (2,1)</span></span>
@@ -764,7 +780,7 @@ x1 ** x2 =
 </ul></li>
 </ul>
 <p>Examples:</p>
-<div id="26290ede" class="cell" data-execution_count="15">
+<div id="cbf358b8" class="cell" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># dot of 1D arrays (inner product)</span></span>
 <span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>z1 <span class="op">=</span> np.array([<span class="dv">2</span>, <span class="dv">5</span>, <span class="dv">1</span>])</span>
 <span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>z2 <span class="op">=</span> np.array([<span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">2</span>])</span>
@@ -792,14 +808,14 @@ np.dot(M1, M2):
 <ul>
 <li>Attempting incompatible shapes raises an error:</li>
 </ul>
-<div id="f9280155" class="cell" data-execution_count="16">
+<div id="ebf22440" class="cell" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(np.dot(M2, M1))   <span class="co"># M2 shape (2,3) cannot be</span></span>
 <span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>                        <span class="co"># dot-multiplied with M1 shape (2,2)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li>Modern Python also supports the matrix multiplication operator <code>@</code> (same semantics as <code>np.matmul</code> / <code>np.dot</code> for 2D):</li>
 </ul>
-<div id="dae68094" class="cell" data-execution_count="17">
+<div id="0c35c435" class="cell" data-execution_count="17">
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="dv">2</span>], [<span class="dv">3</span>, <span class="dv">4</span>]])</span>
 <span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>B <span class="op">=</span> np.array([[<span class="dv">5</span>, <span class="dv">6</span>], [<span class="dv">7</span>, <span class="dv">8</span>]])</span>
 <span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(A <span class="op">@</span> B)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -812,7 +828,7 @@ np.dot(M1, M2):
 <section id="transpose-of-a-matrix" class="level4">
 <h4 class="anchored" data-anchor-id="transpose-of-a-matrix">Transpose of a Matrix</h4>
 <p>The <strong>transpose</strong> of a matrix interchanges rows and columns. In NumPy, use <code>.T</code> or <code>np.transpose()</code>.</p>
-<div id="e1eb444a" class="cell" data-execution_count="18">
+<div id="5ee4f8c9" class="cell" data-execution_count="18">
 <div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>],</span>
 <span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>              [<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>]])</span>
 <span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(A.T)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -826,7 +842,7 @@ np.dot(M1, M2):
 <section id="determinant" class="level4">
 <h4 class="anchored" data-anchor-id="determinant">Determinant</h4>
 <p>The <strong>determinant</strong> is a scalar value computed from a square matrix. It provides information about whether the matrix is invertible.</p>
-<div id="3bf8b117" class="cell" data-execution_count="19">
+<div id="b9707435" class="cell" data-execution_count="19">
 <div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>B <span class="op">=</span> np.array([[<span class="dv">4</span>, <span class="dv">2</span>],</span>
 <span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>              [<span class="dv">3</span>, <span class="dv">1</span>]])</span>
 <span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>det_B <span class="op">=</span> np.linalg.det(B)</span>
@@ -839,7 +855,7 @@ np.dot(M1, M2):
 <section id="inverse-of-a-matrix" class="level4">
 <h4 class="anchored" data-anchor-id="inverse-of-a-matrix">Inverse of a Matrix</h4>
 <p>A square matrix <code>A</code> has an <strong>inverse</strong> <code>A⁻¹</code> only if <code>det(A) ≠ 0</code>. Use <code>np.linalg.inv()</code> to compute it.</p>
-<div id="ad3c8b0a" class="cell" data-execution_count="20">
+<div id="f83c451f" class="cell" data-execution_count="20">
 <div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>C <span class="op">=</span> np.array([[<span class="dv">2</span>, <span class="dv">1</span>],</span>
 <span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>              [<span class="dv">5</span>, <span class="dv">3</span>]])</span>
 <span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>inv_C <span class="op">=</span> np.linalg.inv(C)</span>
@@ -853,7 +869,7 @@ np.dot(M1, M2):
 <section id="rank-of-a-matrix" class="level4">
 <h4 class="anchored" data-anchor-id="rank-of-a-matrix">Rank of a Matrix</h4>
 <p>The <strong>rank</strong> is the number of linearly independent rows or columns in a matrix. Use <code>np.linalg.matrix_rank()</code>.</p>
-<div id="cceb76e0" class="cell" data-execution_count="21">
+<div id="e9d61ca0" class="cell" data-execution_count="21">
 <div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>D <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>],</span>
 <span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>              [<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>],</span>
 <span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>              [<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>]])</span>
@@ -868,7 +884,7 @@ np.dot(M1, M2):
 <section id="trace-of-a-matrix" class="level4">
 <h4 class="anchored" data-anchor-id="trace-of-a-matrix">Trace of a Matrix</h4>
 <p>The <strong>trace</strong> is the sum of the diagonal elements of a square matrix.</p>
-<div id="574c37e6" class="cell" data-execution_count="22">
+<div id="88a205ef" class="cell" data-execution_count="22">
 <div class="sourceCode cell-code" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>E <span class="op">=</span> np.array([[<span class="dv">5</span>, <span class="dv">1</span>, <span class="dv">3</span>],</span>
 <span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>              [<span class="dv">0</span>, <span class="dv">2</span>, <span class="dv">4</span>],</span>
 <span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>              [<span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">6</span>]])</span>
@@ -881,7 +897,7 @@ np.dot(M1, M2):
 <section id="eigenvalues-and-eigenvectors" class="level4">
 <h4 class="anchored" data-anchor-id="eigenvalues-and-eigenvectors">Eigenvalues and Eigenvectors</h4>
 <p>Eigenvalues and eigenvectors are fundamental in linear algebra, used in PCA, Markov chains, and many statistical models.</p>
-<div id="0c70f922" class="cell" data-execution_count="23">
+<div id="89e51c4e" class="cell" data-execution_count="23">
 <div class="sourceCode cell-code" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>F <span class="op">=</span> np.array([[<span class="dv">4</span>, <span class="dv">2</span>],</span>
 <span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>              [<span class="dv">1</span>, <span class="dv">3</span>]])</span>
 <span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -960,7 +976,7 @@ A \mathbf{v} = \lambda \mathbf{v}
 <li><code>np.concatenate([a, b, ...], axis=0 or 1)</code> — general-purpose concatenate along an axis.</li>
 </ul>
 <p>Examples:</p>
-<div id="c820baf9" class="cell" data-execution_count="24">
+<div id="31a9d85b" class="cell" data-execution_count="24">
 <div class="sourceCode cell-code" id="cb43"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>a1 <span class="op">=</span> np.array([<span class="dv">11</span>, <span class="dv">12</span>, <span class="dv">13</span>, <span class="dv">14</span>, <span class="dv">15</span>, <span class="dv">16</span>]).reshape(<span class="dv">3</span>, <span class="dv">2</span>)</span>
 <span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>a2 <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>]).reshape(<span class="dv">3</span>, <span class="dv">3</span>)</span>
 <span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a>a3 <span class="op">=</span> np.array([<span class="op">-</span><span class="dv">1</span>, <span class="op">-</span><span class="dv">2</span>, <span class="op">-</span><span class="dv">3</span>, <span class="op">-</span><span class="dv">4</span>]).reshape(<span class="dv">2</span>, <span class="dv">2</span>)</span>
@@ -994,7 +1010,7 @@ A \mathbf{v} = \lambda \mathbf{v}
 <ul>
 <li>Many reduction functions accept an <code>axis</code> parameter to operate along rows or columns.</li>
 </ul>
-<div id="95c6b700" class="cell" data-execution_count="25">
+<div id="15a80259" class="cell" data-execution_count="25">
 <div class="sourceCode cell-code" id="cb45"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>v <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>]).reshape(<span class="dv">2</span>, <span class="dv">4</span>)</span>
 <span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(v)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -1005,7 +1021,7 @@ A \mathbf{v} = \lambda \mathbf{v}
 <ul>
 <li><code>np.sum()</code> by default sums all elements:</li>
 </ul>
-<div id="885915d9" class="cell" data-execution_count="26">
+<div id="4d2e3db5" class="cell" data-execution_count="26">
 <div class="sourceCode cell-code" id="cb47"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Total sum:'</span>, np.<span class="bu">sum</span>(v))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Total sum: 36</code></pre>
@@ -1014,7 +1030,7 @@ A \mathbf{v} = \lambda \mathbf{v}
 <ul>
 <li>Use <code>axis=0</code> to reduce rows (i.e., compute column-wise results):</li>
 </ul>
-<div id="e2a8c951" class="cell" data-execution_count="27">
+<div id="c8eed291" class="cell" data-execution_count="27">
 <div class="sourceCode cell-code" id="cb49"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Column sums:'</span>, np.<span class="bu">sum</span>(v, axis<span class="op">=</span><span class="dv">0</span>))   <span class="co"># shape (4,)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Column sums: [ 6  8 10 12]</code></pre>
@@ -1023,7 +1039,7 @@ A \mathbf{v} = \lambda \mathbf{v}
 <ul>
 <li>Use <code>axis=1</code> to reduce columns (i.e., compute row-wise results):</li>
 </ul>
-<div id="b69fba35" class="cell" data-execution_count="28">
+<div id="f480b425" class="cell" data-execution_count="28">
 <div class="sourceCode cell-code" id="cb51"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Row sums:'</span>, np.<span class="bu">sum</span>(v, axis<span class="op">=</span><span class="dv">1</span>))      <span class="co"># shape (2,)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Row sums: [10 26]</code></pre>
@@ -1032,7 +1048,7 @@ A \mathbf{v} = \lambda \mathbf{v}
 <ul>
 <li>If you want the result to keep the reduced dimension (i.e., return a 2D column or row), use <code>keepdims=True</code>:</li>
 </ul>
-<div id="dbfbe32e" class="cell" data-execution_count="29">
+<div id="8b30cedb" class="cell" data-execution_count="29">
 <div class="sourceCode cell-code" id="cb53"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(np.<span class="bu">sum</span>(v, axis<span class="op">=</span><span class="dv">1</span>, keepdims<span class="op">=</span><span class="va">True</span>))  <span class="co"># shape (2,1)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[[10]
@@ -1042,7 +1058,7 @@ A \mathbf{v} = \lambda \mathbf{v}
 <ul>
 <li>Other reductions work similarly: <code>np.prod()</code>, <code>np.mean()</code>, <code>np.std()</code>, <code>np.min()</code>, <code>np.max()</code>, <code>np.argmax()</code>, etc.:</li>
 </ul>
-<div id="bb713b7f" class="cell" data-execution_count="30">
+<div id="d138e58f" class="cell" data-execution_count="30">
 <div class="sourceCode cell-code" id="cb55"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Column products:'</span>, np.prod(v, axis<span class="op">=</span><span class="dv">0</span>))</span>
 <span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Row means:'</span>, np.mean(v, axis<span class="op">=</span><span class="dv">1</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">

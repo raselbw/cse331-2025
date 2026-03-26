@@ -110,6 +110,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-KKHDF20HG0"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-KKHDF20HG0', { 'anonymize_ip': true});
+</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
 
@@ -496,16 +505,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 
 
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Author</div>
+  <div class="quarto-title-meta-heading">Affiliation</div>
+  
+    <div class="quarto-title-meta-contents">
+    <p class="author">Md Rasel Biswas </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            ISRT, University of Dhaka
+          </p>
+      </div>
+  </div>
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Md Rasel Biswas </p>
-          </div>
-  </div>
-    
+      
   
     
   </div>
@@ -552,7 +568,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </table>
 <section id="example-dataset" class="level4">
 <h4 class="anchored" data-anchor-id="example-dataset">Example Dataset</h4>
-<div id="d4895aa1" class="cell" data-execution_count="1">
+<div id="0b9e39bb" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># A simple dataset with two subject-wise columns</span></span>
@@ -605,7 +621,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="long-format-wide-long" class="level2" data-number="2">
 <h2 data-number="2" class="anchored" data-anchor-id="long-format-wide-long"><span class="header-section-number">2</span> Long Format (Wide → Long)</h2>
 <p>Transform the subject-wise columns into key–value rows.</p>
-<div id="a525f8dd" class="cell" data-execution_count="2">
+<div id="d3a46648" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>df_long <span class="op">=</span> df.melt(</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    id_vars<span class="op">=</span><span class="st">"id"</span>,               <span class="co"># keep 'id' as identifier column</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    value_vars<span class="op">=</span>[<span class="st">"math"</span>, <span class="st">"english"</span>],  <span class="co"># columns to unpivot</span></span>
@@ -673,7 +689,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="wide-format-long-wide" class="level2" data-number="3">
 <h2 data-number="3" class="anchored" data-anchor-id="wide-format-long-wide"><span class="header-section-number">3</span> Wide Format (Long → Wide)</h2>
 <p>Starting from the long dataset:</p>
-<div id="ab417c1f" class="cell" data-execution_count="3">
+<div id="d42ee4f6" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>df_long</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="3">
 <div>
@@ -731,7 +747,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<div id="b39b9e4d" class="cell" data-execution_count="4">
+<div id="1152f5cd" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>df_wide <span class="op">=</span> df_long.pivot(</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    index<span class="op">=</span><span class="st">"id"</span>,                 <span class="co"># one row per id</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    columns<span class="op">=</span><span class="st">"subject"</span>,          <span class="co"># create new columns from subject names</span></span>
@@ -782,7 +798,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li>Suppose you have a dataset where people’s full names, separated by commas, are stored in a single column:</li>
 </ul>
-<div id="e4db9a03" class="cell" data-execution_count="5">
+<div id="b4ccb1bb" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame({</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"name"</span>: [<span class="st">"Md Rasel,Biswas"</span>, <span class="st">"Sara,Khan"</span>, <span class="st">"John,Doe"</span>]</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>})</span>
@@ -820,7 +836,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li>Split the <code>name</code> column into two separate fields:</li>
 </ul>
-<div id="d2cef5f5" class="cell" data-execution_count="6">
+<div id="8376f009" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># split on the comma character; expand=True creates two new columns</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>df[[<span class="st">"first"</span>, <span class="st">"last"</span>]] <span class="op">=</span> df[<span class="st">"name"</span>].<span class="bu">str</span>.split(<span class="st">","</span>, expand<span class="op">=</span><span class="va">True</span>)</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -868,7 +884,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li>You can then combine the pieces again—for example, to create a compact label:</li>
 </ul>
-<div id="792653c0" class="cell" data-execution_count="7">
+<div id="05474aad" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># concatenate first and last names with an underscore in between</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>df[<span class="st">"combined"</span>] <span class="op">=</span> df[<span class="st">"first"</span>] <span class="op">+</span> <span class="st">"_"</span> <span class="op">+</span> df[<span class="st">"last"</span>]</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -951,7 +967,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="exercise" class="level2" data-number="7">
 <h2 data-number="7" class="anchored" data-anchor-id="exercise"><span class="header-section-number">7</span> Exercise</h2>
-<div id="83107f9d" class="cell" data-execution_count="8">
+<div id="2733e7d8" class="cell" data-execution_count="8">
 <div class="cell-output cell-output-display" data-execution_count="8">
 <div>
 
@@ -1027,7 +1043,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>Convert this bi-variate frequency table into a wide layout like:</p>
-<div id="99db1018" class="cell" data-execution_count="9">
+<div id="6e053afd" class="cell" data-execution_count="9">
 <div class="cell-output cell-output-display" data-execution_count="9">
 <div>
 
